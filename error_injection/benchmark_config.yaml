@@ -1,0 +1,47 @@
+dataset:
+  input_files:
+  - 6_unified/aic_artworks_dump.csv
+  - 6_unified/rijks_260239.csv
+  - 6_unified/dept_1_american_decorative_arts_sample_12396.csv
+  - 6_unified/dept_3_ancient_near_eastern_art_sample_6258.csv
+  - 6_unified/dept_4_arms_and_armor_sample_7433.csv
+  - 6_unified/dept_5_arts_of_africa_oceania_and_the_americas_sample_6235.csv
+  - 6_unified/dept_6_asian_art_sample_31446.csv
+  - 6_unified/dept_7_the_cloisters_sample_2276.csv
+  - 6_unified/dept_8_the_costume_institute_sample_8138.csv
+  - 6_unified/dept_9_drawings_and_prints_sample_66556.csv
+  - 6_unified/dept_10_egyptian_art_sample_13401.csv
+  - 6_unified/dept_11_european_paintings_sample_2352.csv
+  - 6_unified/dept_12_european_sculpture_and_decorative_arts_sample_38690.csv
+  - 6_unified/dept_13_greek_and_roman_art_sample_30165.csv
+  - 6_unified/dept_14_islamic_art_sample_13425.csv
+  - 6_unified/dept_15_the_robert_lehman_collection_sample_2273.csv
+  - 6_unified/dept_16_the_libraries_sample_232.csv
+  - 6_unified/dept_17_medieval_art_sample_6916.csv
+  - 6_unified/dept_18_musical_instruments_sample_2537.csv
+  - 6_unified/dept_19_photographs_sample_6960.csv
+  - 6_unified/dept_21_modern_art_sample_873.csv
+  output_file: benchmark_unified_full.csv
+  target_size: full
+  error_rate: 50
+  random_seed: 42
+error_distribution:
+  image_tier_3_hard: 9.0
+  embedding_swap: 8.0
+  image_tier_2_medium: 5.0
+  image_tier_1_easy: 3.0
+  artist_tier_4_hardest: 5.0
+  artist_tier_3_hard: 5.0
+  artist_tier_2_medium: 5.0
+  artist_tier_1_easy: 5.0
+  culture_tight_swap: 4.0
+  culture_continent_swap: 4.0
+  country_level_swap: 5.0
+  city_level_swap: 5.0
+  material_anachronism: 4.0
+  material_interchange: 4.0
+  technique_anachronism: 4.0
+  technique_interchange: 4.0
+  century_shift: 8.0
+  scale_error: 8.0
+  aspect_swap: 5.0

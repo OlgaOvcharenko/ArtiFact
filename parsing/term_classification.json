@@ -1,0 +1,3374 @@
+{
+  "abachi": "material",
+  "abklatsch": "technique",
+  "abruzze lace": "technique",
+  "acquaint": {
+    "alias_of": "aquatint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "acquatint": {
+    "alias_of": "aquatint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "acrylic": "material",
+  "agate": "material",
+  "agate marbled paper": "technique",
+  "agates": {
+    "alias_of": "agate",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "agouache": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "alabaster": "material",
+  "albume print": {
+    "alias_of": "albumen print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "albumen photograph": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "albumen print": "technique",
+  "albumen prints": {
+    "alias_of": "albumen print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "albumen process": "technique",
+  "albumen silver print": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "albumen silver prints": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "albumenized print": {
+    "alias_of": "albumen print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "albuminized salt print": "technique",
+  "alder": "material",
+  "alen\u00e7on lace": "technique",
+  "alicatado": "technique",
+  "alkaline glaze": "material",
+  "alkaline glazed": {
+    "alias_of": "alkaline glaze",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "alloy": "material",
+  "alloys": {
+    "alias_of": "alloy",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "almandine": "material",
+  "aluminum": "material",
+  "amalgam": "material",
+  "amalgam-gilded": "technique",
+  "amber": "material",
+  "ambrotype": "technique",
+  "ambrotypes": {
+    "alias_of": "ambrotype",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "amethyst": "material",
+  "amethysts": {
+    "alias_of": "amethyst",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "amythyst": {
+    "alias_of": "amethyst",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "ananasvezel": "material",
+  "and coloring": {
+    "alias_of": "hand coloring",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "andaman padauk": "material",
+  "andesite": "material",
+  "aniline ink": "material",
+  "antimony": "material",
+  "antler": "material",
+  "antwerp lace": "technique",
+  "antwerp pot lace": "technique",
+  "application lace": "technique",
+  "appliqu\u00e9": "technique",
+  "aquamarine": "material",
+  "aquamarines": {
+    "alias_of": "aquamarine",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "aquarelle": "technique",
+  "aquating": {
+    "alias_of": "aquatint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "aquatint": "technique",
+  "aquatinted": {
+    "alias_of": "aquatint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "aquatints": {
+    "alias_of": "aquatint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "aquqmarine": {
+    "alias_of": "aquamarine",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "argentan lace": "technique",
+  "argentella": "technique",
+  "arthenware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "asbestos": "material",
+  "asbestos-cement": "material",
+  "ash": "material",
+  "ashlar brick": "material",
+  "asphalt": "material",
+  "asphaltum": {
+    "alias_of": "asphalt",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "assembling": "technique",
+  "aubeldruck": "technique",
+  "autochrome process": "technique",
+  "autotype": "technique",
+  "autotypie": "technique",
+  "aventurine glass": "material",
+  "baize": "material",
+  "bakelite": "material",
+  "baleen": "material",
+  "ball-point pen": "material",
+  "bamboo": "material",
+  "bargello work": "technique",
+  "bark": "material",
+  "baryta paper": "material",
+  "basalt": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "basket weave": "technique",
+  "bast": "material",
+  "basting": "technique",
+  "batik": "technique",
+  "batiste": "material",
+  "baxter print": "technique",
+  "beating": "technique",
+  "beech": "material",
+  "beitelen": "technique",
+  "beitsen": "technique",
+  "bending": "technique",
+  "bergkristal": "material",
+  "berlin woolwork": "technique",
+  "beryl": "material",
+  "beryls": {
+    "alias_of": "beryl",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "bewerken": "technique",
+  "biljoengoud": "material",
+  "billon gold": "material",
+  "binche lace": "technique",
+  "binding": "technique",
+  "bingding": {
+    "alias_of": "binding",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "birch": "material",
+  "biscuit": "material",
+  "biscuit (porcelain": "material",
+  "biscuit porcelain": "material",
+  "biscuits": {
+    "alias_of": "biscuit",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "bister": "material",
+  "black and white slide": "technique",
+  "black basalt": "material",
+  "black chalk": "material",
+  "blackening": "technique",
+  "blad": "material",
+  "bladder": {
+    "alias_of": "bladders",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "bladders": "material",
+  "blanc de chine": "material",
+  "blind-stamped": "technique",
+  "block printing": "technique",
+  "blocked": "technique",
+  "blonde": "technique",
+  "blood": "material",
+  "blotting paper": "material",
+  "blow molding": "technique",
+  "blown": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "blueprint process": "technique",
+  "bobbin": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "bobbin lace": "technique",
+  "bobin": {
+    "alias_of": "bobbin",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "bole": "material",
+  "bone": "material",
+  "bone china": "material",
+  "borduursteek": "technique",
+  "boucl\u00e9": "technique",
+  "boulle work": "technique",
+  "bouquet marbled paper": "technique",
+  "boxwod": {
+    "alias_of": "boxwood",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "boxwood": "material",
+  "brabant bobbin lace": "technique",
+  "brabant lace": "technique",
+  "brabant valenciennes lace": "technique",
+  "braiding": "technique",
+  "branding": "technique",
+  "brandmerken": "technique",
+  "brandschilderen": "technique",
+  "brass": "material",
+  "brazed": "technique",
+  "breass": {
+    "alias_of": "brass",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "brick": "material",
+  "bricklaying": "technique",
+  "bricks": {
+    "alias_of": "brick",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "bristol board": "material",
+  "brocade": "material",
+  "brocaded": "technique",
+  "brocatelle": "material",
+  "brocatello": {
+    "alias_of": "brocatelle",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "bromoil process": "technique",
+  "bromoil transfer print": "technique",
+  "bronze": "material",
+  "bronze paint": "material",
+  "bronze powder": "material",
+  "bronze varnish printing": "technique",
+  "bronzed": {
+    "alias_of": "bronze",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "bruges flower lace": "technique",
+  "bruges lace": "technique",
+  "brush": "technique",
+  "brush in black and grey": "technique",
+  "brush in colors": "technique",
+  "brush in grey": "technique",
+  "brussels appliqu\u00e9": "technique",
+  "brussels bobbin lace": "technique",
+  "brussels lace": "technique",
+  "brussels point de gaze": "technique",
+  "buckram": "material",
+  "bucks point": "technique",
+  "bulrush": "material",
+  "burano lace": "technique",
+  "burato": "technique",
+  "buratto": {
+    "alias_of": "burato",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "burijn": "technique",
+  "burning": "technique",
+  "burnished": "technique",
+  "caen blonde": "technique",
+  "calcium oxide": "material",
+  "calendered": "technique",
+  "calf": "material",
+  "calico": "material",
+  "calligraphy": "technique",
+  "camel hair": "material",
+  "camelid hair": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "caned": "technique",
+  "cangiante": "technique",
+  "cannel\u00e9": "technique",
+  "canvas": "material",
+  "capitonneren": "technique",
+  "caracul": "material",
+  "carboard": {
+    "alias_of": "cardboard",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "carbon print": "technique",
+  "carbro process": "technique",
+  "cardboard": "material",
+  "carnelian": "material",
+  "carnelians": {
+    "alias_of": "carnelian",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "carpentry": "technique",
+  "carrara marble": "material",
+  "carrickmacross lace": "technique",
+  "carrickmacross-kant": "technique",
+  "cartridge paper": "material",
+  "carved": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "carving": "technique",
+  "casein paint": "material",
+  "casein plastic": "material",
+  "cashmere": "material",
+  "cast iron": "material",
+  "casting": "technique",
+  "caved": {
+    "alias_of": "carved",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "cedar": "material",
+  "celadon": "material",
+  "celluloid": "material",
+  "cellulose acetate": "material",
+  "cellulose nitrate film": "material",
+  "cement": "material",
+  "ceramic": {
+    "alias_of": "ceramics",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "ceramics": "material",
+  "certosina": "technique",
+  "chalcedony": "material",
+  "chalk": "material",
+  "chalk lithograph": "technique",
+  "chalks": {
+    "alias_of": "chalk",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "chamois": "material",
+  "champleve": {
+    "alias_of": "champlev\u00e9",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "champlev\u00e9": "technique",
+  "chantilly lace": "technique",
+  "charcoal": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "charcoal stick": "material",
+  "chebka": "technique",
+  "chemical lace": "technique",
+  "chenille": "material",
+  "chenilled": {
+    "alias_of": "chenille",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "cherry": "material",
+  "chesnut": {
+    "alias_of": "chestnut",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "chestnut": "material",
+  "chevron marbled paper": "technique",
+  "chiaroscuro woodcut": "technique",
+  "chiaroscuro woodcuts": {
+    "alias_of": "chiaroscuro woodcut",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "chiffon": "material",
+  "china paper": "material",
+  "chine coll\u00e9": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "chintz": "material",
+  "chisel": "technique",
+  "chlalk": {
+    "alias_of": "chalk",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "chlorobromide paper print": "technique",
+  "chlorobromide-ontwikkelpapierafdruk": "technique",
+  "chroming": "technique",
+  "chromium": "material",
+  "chromofotolithografie": "technique",
+  "chromogene druk": "technique",
+  "chromogenic print": "technique",
+  "chromolithograph": {
+    "alias_of": "chromolithography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "chromolithographed": {
+    "alias_of": "chromolithography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "chromolithographic": {
+    "alias_of": "chromolithography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "chromolithographs": {
+    "alias_of": "chromolithography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "chromolithography": "technique",
+  "chromolitography": {
+    "alias_of": "chromolithography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "chromophotographie": "technique",
+  "chromophotography": "technique",
+  "chromophotolithography": "technique",
+  "chuban": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "ciselure": "technique",
+  "cisel\u00e9 velvet": "material",
+  "citrine": "material",
+  "clay": "material",
+  "clays": {
+    "alias_of": "clay",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "clich\u00e9-verre": "technique",
+  "cloisonne": {
+    "alias_of": "cloisonn\u00e9",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "cloisonn\u00e9": "technique",
+  "cloth": "material",
+  "cluny lace": "technique",
+  "cluster": {
+    "alias_of": "luster",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "coal": "material",
+  "coal gas": "material",
+  "coating": "technique",
+  "coatings": {
+    "alias_of": "coating",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "cobal": {
+    "alias_of": "cobalt",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "cobalt": "material",
+  "cockled": "technique",
+  "cocoa marbled paper": "technique",
+  "coconut palm": "material",
+  "coconut shell": "material",
+  "collage": "technique",
+  "collaged": {
+    "alias_of": "collage",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "collages": {
+    "alias_of": "collage",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "collo-autotype": "technique",
+  "collo-autotypie": "technique",
+  "collodian process": "technique",
+  "collodion silver slide on glass": "technique",
+  "collotype": "technique",
+  "collotype process": "technique",
+  "collotypes": {
+    "alias_of": "collotype",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "color": {
+    "alias_of": "colour",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "color aquatint": "technique",
+  "color carbon print": "technique",
+  "color etching": "technique",
+  "color gum print": "technique",
+  "color linocut": "technique",
+  "color lithograph": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "color lithographic": {
+    "alias_of": "color lithograph",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "color lithographs": {
+    "alias_of": "color lithograph",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "color lithography": "technique",
+  "color mezzotint": "technique",
+  "color on snow": "technique",
+  "color photography": "technique",
+  "color printing": "technique",
+  "color separation negative on film; color separation negative on glass": "technique",
+  "color wood engraving": {
+    "alias_of": "color wood engravings",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "color wood engravings": "technique",
+  "color woodblock": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "color woodblock print": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "color woodblock printed": {
+    "alias_of": "color woodblock print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "color woodblock prints": {
+    "alias_of": "color woodblock print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "color woodcut": "technique",
+  "colored lithograph": {
+    "alias_of": "color lithograph",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "colored lithographs": {
+    "alias_of": "color lithograph",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "colored wood engraving": {
+    "alias_of": "color wood engravings",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "colored woodblock": {
+    "alias_of": "color woodblock",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "colored woodblock print": {
+    "alias_of": "color woodblock print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "colored woodcut": {
+    "alias_of": "color woodcut",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "colored woodcuts": {
+    "alias_of": "color woodcut",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "colors on silk": "technique",
+  "colour": "technique",
+  "combed marbled paper": "technique",
+  "commercial color lithograph": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "commercial lithograph": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "composition": "material",
+  "compositional": {
+    "alias_of": "composition",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "composotion": {
+    "alias_of": "composition",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "compound weave": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "concrete": "material",
+  "concretionary stone": "material",
+  "consolidating": "technique",
+  "coper": {
+    "alias_of": "copper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "copper": "material",
+  "copper alloy": "material",
+  "copper alloys": {
+    "alias_of": "copper alloy",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "copper powder": "material",
+  "coppper": {
+    "alias_of": "copper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "coral": "material",
+  "cord silk": "material",
+  "corduroy": "material",
+  "cork": "material",
+  "coromandel ebony": "material",
+  "corrugated": "technique",
+  "corundum": "material",
+  "cotton": "material",
+  "cottons": {
+    "alias_of": "cotton",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "counterproof": "technique",
+  "cowhide": "material",
+  "crayon manner": "technique",
+  "crayon method": "technique",
+  "creamware": "material",
+  "crepe": "material",
+  "crepe paper": "material",
+  "cretonne": "material",
+  "crewelwork": "technique",
+  "crocheted lace": "technique",
+  "crocheting": "technique",
+  "cross-stitching": "technique",
+  "crystal": "material",
+  "crystals": {
+    "alias_of": "crystal",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "cr\u00eape binding": "technique",
+  "cr\u00eape de chine": "material",
+  "cr\u00eape georgette": "material",
+  "cr\u00eapebinding": "technique",
+  "ctoneware": {
+    "alias_of": "stoneware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "cuenca": "technique",
+  "cupreous metal": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "cuprous oxide": "material",
+  "cut nail": "technique",
+  "cut velvet": "technique",
+  "cutting": "technique",
+  "cutwork": "technique",
+  "cyanotype": "technique",
+  "cyanotypes": {
+    "alias_of": "cyanotype",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "cypress": "material",
+  "daglichtcollodiumzilverdruk": "technique",
+  "daglichtgelatinezilverdruk": "technique",
+  "daglichtpapierafdruk": "technique",
+  "daguerreotype": "technique",
+  "daguerreotypes": {
+    "alias_of": "daguerreotype",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "daguerrotypes": {
+    "alias_of": "daguerreotype",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "damaescened": {
+    "alias_of": "damascened",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "damascened": "technique",
+  "damask": "technique",
+  "daylight collodion silver print": "technique",
+  "daylight gelatin silver print": "technique",
+  "daylight paper print": "technique",
+  "deck paint": "material",
+  "decorated paper": "technique",
+  "devon lace": "technique",
+  "diamond": "material",
+  "diamond-point engraving": "technique",
+  "diamonds": {
+    "alias_of": "diamond",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "die cutting": "technique",
+  "diepdruk": "technique",
+  "dogwood": "material",
+  "doordruk": "technique",
+  "doorgriffelen": "technique",
+  "doorprikken": "technique",
+  "doorstikt borduurwerk": "technique",
+  "doorstopwerk": "technique",
+  "dotted print": "technique",
+  "double combed marbled paper": "technique",
+  "double weave": "technique",
+  "double-sided binding": "technique",
+  "down": "material",
+  "drawing": "technique",
+  "drawings": {
+    "alias_of": "drawing",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "drawn thread work": "technique",
+  "dribbled marmer": "technique",
+  "dried": "technique",
+  "driekleurenautotypie": "technique",
+  "drijven": "technique",
+  "drilling": "technique",
+  "droguet": "technique",
+  "droguet liser\u00e9": "technique",
+  "druk in blauw": "technique",
+  "druk in bruin": "technique",
+  "druk in rood": "technique",
+  "drypiont": {
+    "alias_of": "drypoint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "drypoin": {
+    "alias_of": "drypoint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "drypoing": {
+    "alias_of": "drypoint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "drypoint": "technique",
+  "drypoints": {
+    "alias_of": "drypoint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "dubbelzijdige binding": "technique",
+  "duchesse lace": "technique",
+  "duvetyne": "material",
+  "dye": "material",
+  "dyed": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "earhenware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "earhtenware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "earthenware": "material",
+  "earthernware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "eartheware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "earthware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "earthwnware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "east european lace": "technique",
+  "eathenware": {
+    "alias_of": "earthenware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "ebony": "material",
+  "eelgrass": "material",
+  "eembroidered": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "egg": "material",
+  "elm": "material",
+  "email": "material",
+  "emaillefoto": "technique",
+  "emailleren": "technique",
+  "emailschilderen": "technique",
+  "emboidered": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "emboidery": {
+    "alias_of": "embroidery",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "embossing": "technique",
+  "embriodered": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "embrodered": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "embroided": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "embroiderd": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "embroidere": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "embroidered": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "embroidering": "technique",
+  "embroidery": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "embroidery stitch": "technique",
+  "emerald": "material",
+  "emeralds": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "emroidered": {
+    "alias_of": "embroidered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "enamaled": {
+    "alias_of": "enameled",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "enamel": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "enamel paint": "material",
+  "enamel painting": "technique",
+  "enamel photograph": "technique",
+  "enameld": {
+    "alias_of": "enameled",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "enameled": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "enamelled": {
+    "alias_of": "enameled",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "enamels": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "encrusted": "technique",
+  "ending": {
+    "alias_of": "bending",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "engaving": {
+    "alias_of": "engraving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "engels borduurwerk": "technique",
+  "engels steengoed": "material",
+  "engine turning": "technique",
+  "english embroidery": "technique",
+  "english stoneware": "material",
+  "engobe": "material",
+  "engravig": {
+    "alias_of": "engraving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "engravin": {
+    "alias_of": "engraving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "engraving": "technique",
+  "engraving on silver": "technique",
+  "engravingl": {
+    "alias_of": "engraving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "engravings": {
+    "alias_of": "engraving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "engravng": {
+    "alias_of": "engraving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "etched daguerreotype print": "technique",
+  "etchin": {
+    "alias_of": "etching",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "etching": "technique",
+  "etching needle": "technique",
+  "etching transferred to stone": "technique",
+  "etchings": {
+    "alias_of": "etching",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "etchng": {
+    "alias_of": "etching",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "etcing": {
+    "alias_of": "etching",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "ets overgebracht op steen": "technique",
+  "extrusive rock": "material",
+  "fabric stitch": "technique",
+  "faceing": {
+    "alias_of": "faceting",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "faceting": "technique",
+  "faience": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "faience fine": "material",
+  "fairy point": "technique",
+  "fastened": "technique",
+  "fa\u00e7on de venise": "technique",
+  "fa\u00efence fine": "material",
+  "feather": "material",
+  "feathers": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "felt": "material",
+  "felted": "technique",
+  "ferrotyping": "technique",
+  "festonneren": "technique",
+  "festonsteek": "technique",
+  "festoon stitch": "technique",
+  "festooning": "technique",
+  "fiber": "material",
+  "fibers": {
+    "alias_of": "fiber",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "figure weft system": "technique",
+  "figuurinslagstelsel": "technique",
+  "filet knotwork": "technique",
+  "filet lace": "technique",
+  "filetkant": "technique",
+  "filetknoopwerk": "technique",
+  "filigree": "technique",
+  "filigree glass": "technique",
+  "filigreed": {
+    "alias_of": "filigree",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "filing": "technique",
+  "fill": "technique",
+  "filligree": {
+    "alias_of": "filigree",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "filling": {
+    "alias_of": "filing",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "finlay": {
+    "alias_of": "inlay",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "fir": "material",
+  "fired": "technique",
+  "flanders lace": "technique",
+  "flannel": "material",
+  "flat stitch": "technique",
+  "flat venetian": "technique",
+  "flax": "material",
+  "fleece": "material",
+  "flemish guipure lace": "technique",
+  "flemish lace": "technique",
+  "flemish lace wit cutted threads": "technique",
+  "flemish lace with plaited ground": "technique",
+  "flint": "material",
+  "floss silk": "material",
+  "flotation": "technique",
+  "flotteren": "technique",
+  "flower": "material",
+  "flowers": {
+    "alias_of": "flower",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "fluweel met uitsparingen": "technique",
+  "fluweelband": "material",
+  "foam rubber": "material",
+  "folding": "technique",
+  "forging": "technique",
+  "formed": "technique",
+  "fotobutton": "technique",
+  "fotokeramiek": "technique",
+  "fotolithografie": "technique",
+  "fotomechanisch drukproced\u00e9": "technique",
+  "fotomechanisch reli\u00ebfdrukproced\u00e9": "technique",
+  "fotozinkografie": "technique",
+  "four-color autotype": "technique",
+  "four-color rotogravure": "technique",
+  "framing": "technique",
+  "framling": {
+    "alias_of": "framing",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "fresco": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "freshwater pearl": "material",
+  "fruitwood": "material",
+  "fruitwoods": {
+    "alias_of": "fruitwood",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "fuel": "material",
+  "fur": "material",
+  "fustian": "material",
+  "gadrooned": "technique",
+  "galloon": "material",
+  "galoon": {
+    "alias_of": "galloon",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "galvanized": "technique",
+  "galvanoplastiek": "technique",
+  "galvanoplasty": "technique",
+  "gaouache": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gaouche": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "garnet": "material",
+  "garnets": {
+    "alias_of": "garnet",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gaskool": "material",
+  "gaslichtpapierafdruk": "technique",
+  "gaslight paper print": "technique",
+  "gauffering": "technique",
+  "gaufreren": "technique",
+  "gauze": "material",
+  "gealbuminiseerde zoutdruk": "technique",
+  "gehaakte kant": "technique",
+  "geknoopte kant": "technique",
+  "gelatin silver negative": "technique",
+  "gelatin silver print": "technique",
+  "gelatin silver printing": {
+    "alias_of": "gelatin silver print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "gelatin silver prints": {
+    "alias_of": "gelatin silver print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "gelatin silver slide on glass": "technique",
+  "gelatin silver transparency": "technique",
+  "gelatineglasnegatief": "technique",
+  "gelinieerd papier": "material",
+  "genoese pillow lace": "technique",
+  "geperst fluweel": "technique",
+  "geporseleind karton": "material",
+  "german silver": "material",
+  "geruit papier": "material",
+  "gesso": "material",
+  "gewaterd": "technique",
+  "ge\u00ebtste daguerreotypie-afdruk": "technique",
+  "ghent lace": "technique",
+  "ghiordes knot": "technique",
+  "ghiordesknoop": "technique",
+  "gild": "technique",
+  "gilded": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "gilding": "technique",
+  "gillotage": "technique",
+  "gilt leather": "material",
+  "gilt paint": "material",
+  "glac\u00e9leer": "material",
+  "glanskatoen": "material",
+  "glanzen": "technique",
+  "glasbatist": "material",
+  "glass": "material",
+  "glass batiste": "material",
+  "glass painting": "technique",
+  "glassblowing": "technique",
+  "glassine": "material",
+  "glaze": "material",
+  "glazed": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "glazes": {
+    "alias_of": "glaze",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "glazing": "material",
+  "gliding": {
+    "alias_of": "gilding",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "glitter": "material",
+  "glossing": "technique",
+  "glue": "material",
+  "goache": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "goat hair": "material",
+  "goatskin": "material",
+  "goauche": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gold": "material",
+  "gold brocade": "material",
+  "gold embossing": "technique",
+  "gold galloon": "material",
+  "gold lace": "technique",
+  "gold leaf": "material",
+  "gold powder": "material",
+  "gold thread": "material",
+  "gold threads": {
+    "alias_of": "gold thread",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "golfmarmer": "technique",
+  "gopuache": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gouace": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gouache": "material",
+  "gouaches": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gouahe": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gouche": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "goudbrokaat": "material",
+  "goudgalon": "material",
+  "goudkant": "technique",
+  "goudopdruk": "technique",
+  "gourd": "material",
+  "gourds": {
+    "alias_of": "gourd",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "grahite": {
+    "alias_of": "graphite",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "granadilla wood": "material",
+  "granietmarmer": "technique",
+  "granite": "material",
+  "granite marble": "technique",
+  "granulation": "technique",
+  "graphie": {
+    "alias_of": "graphite",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "graphite": "material",
+  "graphites": {
+    "alias_of": "graphite",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "graphotype": "technique",
+  "graphotypie": "technique",
+  "graphtie": {
+    "alias_of": "graphite",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "gravure in zilver": "technique",
+  "green glass": "material",
+  "grinding": "technique",
+  "grisaille": "technique",
+  "gros point": "technique",
+  "grosgrain": "material",
+  "grouache": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "grounded ventian point": "technique",
+  "guache": {
+    "alias_of": "gouache",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "guilding": {
+    "alias_of": "gilding",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "guimpe work": "technique",
+  "guimpewerk": "technique",
+  "gum": "material",
+  "gum arabic": "technique",
+  "gum bichromate process": "technique",
+  "gypsography": "technique",
+  "gypsum": "material",
+  "haarvilt": "material",
+  "hackia": "material",
+  "hair": "material",
+  "hair felt": "material",
+  "hairs": {
+    "alias_of": "hair",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "half-linen": "material",
+  "halflinnen": "material",
+  "hammered": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "hammering": "technique",
+  "hand colored": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "hand coloring": "technique",
+  "hand coloured": {
+    "alias_of": "hand colored",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "handwriting": "technique",
+  "hard paste porcelain": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "hardboard": "material",
+  "hardwood": "material",
+  "hardwoods": {
+    "alias_of": "hardwood",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "hashira": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "hectograph": "technique",
+  "hectographic": {
+    "alias_of": "hectograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "heliodruck": "technique",
+  "heliotype": "technique",
+  "hematite": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "hennep": "material",
+  "hewn": "technique",
+  "hiramakie": "technique",
+  "hogen": "technique",
+  "holly": "material",
+  "honiton lace": "technique",
+  "hoof": "material",
+  "horn": "material",
+  "horsehair": "material",
+  "hosoban": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "houtsnede": "technique",
+  "human hair": "material",
+  "ierse gehaakte kant": "technique",
+  "ijzerdraad": "material",
+  "ijzerets": "technique",
+  "ikat": "technique",
+  "imbibitieproced\u00e9": "technique",
+  "imbibition process": "technique",
+  "imitating leather": {
+    "alias_of": "imitation leather",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "imitation leather": "material",
+  "imitation pearl": "material",
+  "imitation pearls": {
+    "alias_of": "imitation pearl",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "imitation tortoise shell": "material",
+  "impregnation": "technique",
+  "imprinted": {
+    "alias_of": "printed",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "incising": "technique",
+  "india ink": "material",
+  "indian ink": {
+    "alias_of": "india ink",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "ingrijpsteek": "technique",
+  "inik": {
+    "alias_of": "ink",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "ink": "material",
+  "inkjet print": "technique",
+  "inkleuren": "technique",
+  "inkm": {
+    "alias_of": "ink",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "inks": {
+    "alias_of": "ink",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "inlay": "technique",
+  "inlays": {
+    "alias_of": "inlay",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "inllay": {
+    "alias_of": "inlay",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "inpersen": "technique",
+  "inpolychrome": {
+    "alias_of": "polychrome",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "inset": "technique",
+  "insets": {
+    "alias_of": "inset",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "insnijden": "technique",
+  "intaglio": "technique",
+  "intaglio printing": "technique",
+  "intaglio printmaking technique": "technique",
+  "intaglios": {
+    "alias_of": "intaglio",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "intarsia": "technique",
+  "interlocking stitch": "technique",
+  "intestine": "material",
+  "iridescence": "technique",
+  "iris print": "technique",
+  "iron": "material",
+  "iron etching": "technique",
+  "iron processes": "technique",
+  "iron wire": "material",
+  "ironwood": "material",
+  "ishizuri-e": "technique",
+  "ithograph": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "ithograpy": {
+    "alias_of": "lithography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "ivory": "material",
+  "ivory point": "technique",
+  "jacquard": "technique",
+  "jade": "material",
+  "jadeite": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "japan paper": {
+    "alias_of": "japanese paper",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "japanese cypress": "material",
+  "japanese paper": "material",
+  "jasper": "material",
+  "jasperware": "material",
+  "jet": "material",
+  "jos-p\u00e9 print": "technique",
+  "jos-p\u00e9druk": "technique",
+  "jute": "material",
+  "kallitype": "technique",
+  "kant": "material",
+  "kantborduurwerk": "technique",
+  "kapok": "material",
+  "keper": "technique",
+  "kesi": "technique",
+  "kettle stitch": "technique",
+  "kievitsmarmer": "technique",
+  "kingwood": "material",
+  "kirikane": "technique",
+  "kleur op snee": "technique",
+  "kleuren op zijde": "technique",
+  "kleurenaquatint": "technique",
+  "kleurenautotypie": "technique",
+  "kleurenets": "technique",
+  "kleurenfotografie": "technique",
+  "kleurengomdruk": "technique",
+  "kleurenkooldruk": "technique",
+  "kleurenmezzotint": "technique",
+  "kloppen": "technique",
+  "knitting": "technique",
+  "knotted": "technique",
+  "knotted lace": "technique",
+  "koban": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "koordzijde": "material",
+  "krabben": "technique",
+  "kraft paper": "material",
+  "lace embroidery": "technique",
+  "lacqer": {
+    "alias_of": "lacquer",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "lacqeured": {
+    "alias_of": "lacquered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "lacque": {
+    "alias_of": "lacquer",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "lacquer": "material",
+  "lacquered": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "lacquering": "technique",
+  "lacquers": {
+    "alias_of": "lacquer",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "laid down": "discard",
+  "laid paper": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "laid papers": {
+    "alias_of": "laid paper",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "lampas": "material",
+  "lampas met dubbele grond": "technique",
+  "lampas with double ground": "technique",
+  "lam\u00e9": "material",
+  "lanceren": "technique",
+  "lapis lazuli": "material",
+  "laquer": {
+    "alias_of": "lacquer",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "laquered": {
+    "alias_of": "lacquered",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "large snowflake ground with ring": "technique",
+  "latex paint": "material",
+  "latten": "material",
+  "launching": "technique",
+  "lead": "material",
+  "lead glass": "material",
+  "lead glaze": "material",
+  "lead glazed": {
+    "alias_of": "lead glaze",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "lead glazes": {
+    "alias_of": "lead glaze",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "lead white": "material",
+  "leaded glass": {
+    "alias_of": "lead glass",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "leading": "technique",
+  "leaf": "material",
+  "leather": "material",
+  "lemon wood": "material",
+  "lenticulaire druk": "technique",
+  "lenticular printing": "technique",
+  "lenyard": "material",
+  "letterpress printing": "technique",
+  "lier lace": "technique",
+  "lift-ground etching": "technique",
+  "liimestone": {
+    "alias_of": "limestone",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "lille lace": "technique",
+  "limerick lace": "technique",
+  "limestone": "material",
+  "linden": "material",
+  "line block": "technique",
+  "line engraving": "technique",
+  "linen": "material",
+  "lining": "technique",
+  "linings": {
+    "alias_of": "lining",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "linocut": "technique",
+  "linoleum": "material",
+  "liser\u00e9": "technique",
+  "litho etching": "technique",
+  "lithograp": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "lithograph": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "lithographed": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "lithographf": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "lithographic": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "lithographic engraving": "technique",
+  "lithographs": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "lithographs engraving": {
+    "alias_of": "lithographic engraving",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "lithography": "technique",
+  "lithorgraph": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "llining": {
+    "alias_of": "lining",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "llithograph": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "loam": "material",
+  "locust": "material",
+  "looking glasses": "material",
+  "lost-wax process": "technique",
+  "lthograph": {
+    "alias_of": "lithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "luster": "material",
+  "luster glaze": "material",
+  "luxeuil lace": "technique",
+  "maasgrond": "technique",
+  "machinale druk": "technique",
+  "machine": {
+    "alias_of": "machined",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "machine lace": "technique",
+  "machined": "technique",
+  "macrame": "technique",
+  "mahogany": "material",
+  "mahoogany": {
+    "alias_of": "mahogany",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "maiolica": "technique",
+  "maltese lace": "technique",
+  "manganese oxide": "material",
+  "maple": "material",
+  "marble": "material",
+  "marbled": {
+    "alias_of": "marble",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "marbled paper": "material",
+  "marbles": {
+    "alias_of": "marble",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "marqueterie": "technique",
+  "marquetry": "technique",
+  "matelass\u00e9": "technique",
+  "material": {
+    "alias_of": "material)",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "material)": "material",
+  "matte daglichtcollodiumzilverdruk": "technique",
+  "matte daylight collodion silver print": "technique",
+  "mechanical printing": "technique",
+  "mechanical process": "technique",
+  "mechanisch proced\u00e9": "technique",
+  "mechlin": "technique",
+  "meerlagen film": "material",
+  "mercury": "material",
+  "mercury sulfide": "material",
+  "mesh ground": "technique",
+  "metail": {
+    "alias_of": "metal",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "metal": "material",
+  "metal cut": "technique",
+  "metal thread": "material",
+  "metal threads": {
+    "alias_of": "metal thread",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "metal wrapped thread": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "metal wrapped threads": {
+    "alias_of": "metal wrapped thread",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "metalic thread": {
+    "alias_of": "metallic thread",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "metall": {
+    "alias_of": "metal",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "metallic thread": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "metallic threads": {
+    "alias_of": "metallic thread",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "metals": {
+    "alias_of": "metal",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "mexicaine": "technique",
+  "mezzotint": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "mezzotints": {
+    "alias_of": "mezzotint",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "mica": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "milan lace": "technique",
+  "milanese tape lace": "technique",
+  "millefiori glass": "material",
+  "mimeograph": {
+    "alias_of": "mimeography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "mimeography": "technique",
+  "mineral": "material",
+  "mixed brussels": "technique",
+  "mixed lace": "technique",
+  "mmetal": {
+    "alias_of": "metal",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "mockado": "material",
+  "model making": "technique",
+  "modeling": "technique",
+  "modelmaking": "technique",
+  "moffelen": "technique",
+  "mohair": "material",
+  "moire": "technique",
+  "moir\u00e9 marbled paper": "technique",
+  "molded": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "molding": "technique",
+  "moldings": {
+    "alias_of": "molding",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "monotype": "technique",
+  "moonstone": "material",
+  "morocco": "material",
+  "mosaic": "technique",
+  "mother of pearl": "material",
+  "moulded": {
+    "alias_of": "molded",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "mouldings": {
+    "alias_of": "molding",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "mtal": {
+    "alias_of": "metal",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "mud": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "muffle kiln": "technique",
+  "muffling": "technique",
+  "multi-layer film": "material",
+  "muslin": "material",
+  "naaldkant": "technique",
+  "nailed": "technique",
+  "napping": "technique",
+  "nashiji": "technique",
+  "nature print": "technique",
+  "nautilus shell": "material",
+  "needle lace": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "needle lace ground": "technique",
+  "needle laces": {
+    "alias_of": "needle lace",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "needlework": {
+    "alias_of": "needleworking",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "needleworking": "technique",
+  "nephrite": "material",
+  "neushoornhoorn": "material",
+  "newsprint": "material",
+  "ngraving": {
+    "alias_of": "engraving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "nickel": "material",
+  "niello": "technique",
+  "niet-ingebrande fotokeramiek": "technique",
+  "nishiki-e": "technique",
+  "nut": "material",
+  "nuts": {
+    "alias_of": "nut",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "nylon": "material",
+  "oak": "material",
+  "oban": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "obsidian": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "offset-printed": "technique",
+  "oil": "material",
+  "oil paint": "material",
+  "oil pastel": "material",
+  "oil transfer print": "technique",
+  "oil-gilded": "technique",
+  "oilcloth": "material",
+  "oils": {
+    "alias_of": "oil",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "old binche lace": "technique",
+  "old brabant lace": "technique",
+  "old brussels lace": "technique",
+  "old flemish lace": "technique",
+  "old mechlin lace": "technique",
+  "old milan lace": "technique",
+  "oleograph": "technique",
+  "olive": "material",
+  "olivine": "material",
+  "omwikkelen": "technique",
+  "onyx": "material",
+  "opal": "material",
+  "opaque white glass": "material",
+  "open naaiwerk": "technique",
+  "openwork embroidery": "technique",
+  "orcelain": {
+    "alias_of": "porcelain",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "organic material": "material",
+  "organic materials": {
+    "alias_of": "organic material",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "organza": "material",
+  "orotone": "technique",
+  "osiers": "material",
+  "oyster shell": "material",
+  "padding": "technique",
+  "padouk": "material",
+  "paduk": {
+    "alias_of": "padouk",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "paillette": "material",
+  "paillettes": {
+    "alias_of": "paillette",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pailllettes": {
+    "alias_of": "paillette",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "paint": "material",
+  "painted": "technique",
+  "painting": "technique",
+  "painting technique": "technique",
+  "paintings": {
+    "alias_of": "painting",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "paints": {
+    "alias_of": "paint",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "palladium process": "technique",
+  "palm leaf": "material",
+  "pamo technique": "technique",
+  "pamortechniek": "technique",
+  "panama straw": "material",
+  "panamastro": "material",
+  "panel": "material",
+  "panels": {
+    "alias_of": "panel",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pannotype": "technique",
+  "pannotypie": "technique",
+  "panted": {
+    "alias_of": "painted",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "papaer": {
+    "alias_of": "paper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "paper": "material",
+  "paperf": {
+    "alias_of": "paper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "paperg": {
+    "alias_of": "paper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "paperl": {
+    "alias_of": "paper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "papers": {
+    "alias_of": "paper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "paperwork": "technique",
+  "papier mach\u00e9": {
+    "alias_of": "papier m\u00e2ch\u00e9",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "papier m\u00e2ch\u00e9": "material",
+  "papiernegatief": "technique",
+  "papierwerk": "technique",
+  "papper": {
+    "alias_of": "paper",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "papyrus": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "parchement": {
+    "alias_of": "parchment",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "parchment": "material",
+  "paris lace": "technique",
+  "particle board": "material",
+  "paste": "material",
+  "paste print": "technique",
+  "pasteboad": {
+    "alias_of": "pasteboard",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pasteboard": "material",
+  "pasted down": "discard",
+  "pastel": "material",
+  "pastels": {
+    "alias_of": "pastel",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pasting": "technique",
+  "patent leather": "material",
+  "patinaed": "technique",
+  "patinated": {
+    "alias_of": "patinaed",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "pattern tracing paper": "material",
+  "pattern warp": "technique",
+  "pear": "material",
+  "pearl": "material",
+  "pearled rosaline": "technique",
+  "pearls": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "peat": "material",
+  "peel apart": "technique",
+  "peel apart (dye diffusion transfer print": "technique",
+  "peeled fabric": "technique",
+  "pellenweefsel": "technique",
+  "pen": "technique",
+  "pen in black": "technique",
+  "pen in black ink": "technique",
+  "pen in brown": "technique",
+  "pen in bruin": "technique",
+  "pen in colors": "technique",
+  "pen in grey": "technique",
+  "pen in grijs": "technique",
+  "pen in kleuren": "technique",
+  "pen in zwart": "technique",
+  "pen in zwarte inkt": "technique",
+  "pen lithography": "technique",
+  "pen on ivory": "technique",
+  "pen op ivoor": "technique",
+  "pencil": "material",
+  "pencils": {
+    "alias_of": "pencil",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "penlithografie": "technique",
+  "penn": {
+    "alias_of": "pen",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "penseel in grijs": "technique",
+  "penseel in kleuren": "technique",
+  "penseel in zwart en grijs": "technique",
+  "pepper": "material",
+  "perforating": "technique",
+  "perforations": {
+    "alias_of": "perforating",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "perspex": "material",
+  "petit point": "technique",
+  "pewter": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "phantasy marbled paper": "technique",
+  "photo-teinturedruk": "technique",
+  "photo-tinted print": "technique",
+  "photo-zincography": "technique",
+  "photoaquatint": "technique",
+  "photobutton": "technique",
+  "photoceramics": "technique",
+  "photochemical processes": "technique",
+  "photochrom": "technique",
+  "photocopy": "technique",
+  "photogalvanography": "technique",
+  "photogenic drawing": "technique",
+  "photoglyphic engraving": "technique",
+  "photograph": {
+    "alias_of": "photography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "photographic": {
+    "alias_of": "photography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "photographic film": "material",
+  "photographic support": "material",
+  "photographie": {
+    "alias_of": "photography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "photographie peinte": "technique",
+  "photographs": {
+    "alias_of": "photography",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "photography": "technique",
+  "photography technique": "technique",
+  "photogravure": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "photogravures": {
+    "alias_of": "photogravure",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "photolithograph": "technique",
+  "photolithographs": {
+    "alias_of": "photolithograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "photolithography": "technique",
+  "photomechanical printing process": "technique",
+  "photomechanical relief printing process": "technique",
+  "picked": "technique",
+  "pieced": {
+    "alias_of": "pierced",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "pierced": "technique",
+  "pietra dura": "technique",
+  "piezography": "technique",
+  "pigement": {
+    "alias_of": "pigment",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pigment": "material",
+  "pigments": {
+    "alias_of": "pigment",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pigskin": "material",
+  "pilate": {
+    "alias_of": "plate",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pinchbeck": "material",
+  "pine": "material",
+  "pineapple fiber": "material",
+  "pipe clay": "material",
+  "piqu\u00e9": "material",
+  "pitch": "material",
+  "pitriet": "material",
+  "placed down": "discard",
+  "plain wave": {
+    "alias_of": "plain weave",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "plain weave": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "plain weaves": {
+    "alias_of": "plain weave",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "plaint": {
+    "alias_of": "paint",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "plaited-lace": "technique",
+  "plakken": "technique",
+  "plane": {
+    "alias_of": "planed",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "planed": "technique",
+  "planographic printing": "technique",
+  "plant material": "material",
+  "plastic": "material",
+  "plate": "material",
+  "plated": {
+    "alias_of": "pleated",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "plates": {
+    "alias_of": "plate",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "platinum": "material",
+  "platinum process": "technique",
+  "platsteek": "technique",
+  "pleated": "technique",
+  "plexiglas": "material",
+  "plum": "material",
+  "plumetis": "technique",
+  "plush": "material",
+  "plywood": "material",
+  "pocelain": {
+    "alias_of": "porcelain",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "pochoir": "technique",
+  "poecelain": {
+    "alias_of": "porcelain",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "point de france": "technique",
+  "point de milan": "technique",
+  "polaroid": "technique",
+  "polichrome": {
+    "alias_of": "polychrome",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "polish": "technique",
+  "polychome": {
+    "alias_of": "polychrome",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "polychrom": {
+    "alias_of": "polychromy",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "polychrome": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "polychromed": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "polychromy": "technique",
+  "polycrome": {
+    "alias_of": "polychrome",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "polyester": "material",
+  "polystyrene": "material",
+  "polyurethane": "material",
+  "ponsgravure": "technique",
+  "poplar": "material",
+  "poporcelain": {
+    "alias_of": "porcelain",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "popular": {
+    "alias_of": "poplar",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "porcelain": "material",
+  "porcelain photography": "technique",
+  "porcelained": {
+    "alias_of": "porcelain",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "porcelainized cardboard": "material",
+  "porcleain": {
+    "alias_of": "porcelain",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "porseleinfotografie": "technique",
+  "poster paint": "material",
+  "pot lace": "technique",
+  "pottery": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "pouncing": "technique",
+  "pporcelain": {
+    "alias_of": "porcelain",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "precious stone": "material",
+  "precious stones": {
+    "alias_of": "precious stone",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "prenttekening": "technique",
+  "prepared paper": "material",
+  "pressed": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "pressed velvet": "technique",
+  "pressing": "technique",
+  "pressure-sensitive tape": "material",
+  "pricking": "technique",
+  "prikken": "technique",
+  "print in blue": "technique",
+  "print in brown": "technique",
+  "print in red": "technique",
+  "printed": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "printed materials": "technique",
+  "printen": "technique",
+  "printing": "technique",
+  "printing block": "technique",
+  "printing ink": "material",
+  "printings": {
+    "alias_of": "printing",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "processing": "technique",
+  "punched engraving": "technique",
+  "punching": "technique",
+  "punto in aria": "technique",
+  "purpleheart": "material",
+  "putty": "material",
+  "p\u00e2te de verre": "technique",
+  "p\u00e2te-sur-p\u00e2te": "technique",
+  "quartz": "material",
+  "quartzite": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "quilted embroidery": "technique",
+  "quilting": "technique",
+  "radgravure": "technique",
+  "raffia": "material",
+  "ramie fiber": "material",
+  "rattan": "material",
+  "rayon": "material",
+  "rc paper": "material",
+  "red coral": "material",
+  "red gold": "material",
+  "red lacquer": "material",
+  "redware": "material",
+  "reed": "material",
+  "relief": "technique",
+  "relief etching": "technique",
+  "relief print": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "relief printing": "technique",
+  "relief velvet": "technique",
+  "reliefs": {
+    "alias_of": "relief",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "reli\u00ebffluweel": "technique",
+  "reli\u00ebfgravure": "technique",
+  "repousse": {
+    "alias_of": "repouss\u00e9",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "repouss\u00e9": "technique",
+  "reprinted": {
+    "alias_of": "printed",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "reprographic copy": "technique",
+  "resin": "material",
+  "resist-dyed": "technique",
+  "reticella": "technique",
+  "retouching": "technique",
+  "retroussage": "technique",
+  "rhinoceros horn": "material",
+  "rhodonite": "material",
+  "rib": "material",
+  "rib binding": "technique",
+  "ribbon": "material",
+  "ribbons": {
+    "alias_of": "ribbon",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "rice paper": "material",
+  "richelieu work": "technique",
+  "richelieuwerk": "technique",
+  "riet": "material",
+  "rips": "material",
+  "ripsbinding": "technique",
+  "ripslint": "material",
+  "riveted": "technique",
+  "rocker stamped": "technique",
+  "roll film": "material",
+  "rollen": "technique",
+  "rolling": "technique",
+  "rope": "material",
+  "ropemaking": "technique",
+  "rosaline lace": "technique",
+  "rosewod": {
+    "alias_of": "rosewood",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "rosewood": "material",
+  "rotary engraving": "technique",
+  "rotogravure": "technique",
+  "roulette": "technique",
+  "rouletted": {
+    "alias_of": "roulette",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "rubber": "material",
+  "rubbing": "technique",
+  "rubies": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "ruby": "material",
+  "runderleer": "material",
+  "running stitch": "technique",
+  "running stitches": {
+    "alias_of": "running stitch",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "rushwork": "technique",
+  "russian lace": "technique",
+  "russian tape lace": "technique",
+  "r\u00e9gence lace": "technique",
+  "r\u00e9gence-kant": "technique",
+  "sailcloth": "material",
+  "salt glaze": "technique",
+  "salt glazed": {
+    "alias_of": "salt glaze",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "salted paper print": "technique",
+  "salted paper prints": {
+    "alias_of": "salted paper print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "samit": {
+    "alias_of": "samite",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "samite": "technique",
+  "sand": "material",
+  "sanding": "technique",
+  "sandstone": "material",
+  "sappanwood": "material",
+  "sapphire": "material",
+  "sapphires": {
+    "alias_of": "sapphire",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "sateen": "material",
+  "satijnbinding": "technique",
+  "satin": "material",
+  "satin binding": "technique",
+  "satin cotton": "material",
+  "satin stitch": "technique",
+  "satinm": {
+    "alias_of": "satin",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "satins": {
+    "alias_of": "satin",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "satinwood": "material",
+  "sawdust": "material",
+  "sawing": "technique",
+  "scarab": "material",
+  "scheppen": "technique",
+  "schiemanswerk": "technique",
+  "schwartzlot": {
+    "alias_of": "schwarzlot",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "schwarzlot": "technique",
+  "scooping": "technique",
+  "scoring": "technique",
+  "scratchboard": "technique",
+  "scratching": "technique",
+  "screen print": "technique",
+  "screen printing in color": "technique",
+  "screen-printed": "technique",
+  "screwed": "technique",
+  "scrotel marbled paper": "technique",
+  "sculpting": "technique",
+  "sealing": "technique",
+  "sealing wax": "material",
+  "sealskin": "material",
+  "sedan lace": "technique",
+  "sedan-kant": "technique",
+  "senneh knot": "technique",
+  "sennehknoop": "technique",
+  "sentoku": "material",
+  "sepia": "material",
+  "serge": "material",
+  "serpentine": "material",
+  "serpentinite": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "sewing": "technique",
+  "sgraffito": "technique",
+  "shadow-quilted": "technique",
+  "shagreen": "material",
+  "shantoeng": "material",
+  "shantung": "material",
+  "sharkskin": "material",
+  "shaving": "technique",
+  "sheet film": "material",
+  "sheet metal": "material",
+  "shell": "material",
+  "shell marbled paper": "technique",
+  "shell white": "material",
+  "shellac": "material",
+  "shells": {
+    "alias_of": "shell",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "shibuichi": "material",
+  "shikishiban": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "silk": "material",
+  "silks": {
+    "alias_of": "silk",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "silve": {
+    "alias_of": "silver",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "silver": "material",
+  "silver amalgam": "material",
+  "silver brocade": "material",
+  "silver leaf": "material",
+  "silver paint": "material",
+  "silver prints": {
+    "alias_of": "silver paint",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "silver stain": "material",
+  "silver thread": "material",
+  "silver-tone bleach print": "technique",
+  "silverf": {
+    "alias_of": "silver",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "silvering": "technique",
+  "siver": {
+    "alias_of": "silver",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "sjabloneren": "technique",
+  "sjabloondruk": "technique",
+  "sketch": {
+    "alias_of": "sketched",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "sketched": "technique",
+  "skin": "material",
+  "skins": {
+    "alias_of": "skin",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "slag": "material",
+  "slate": "material",
+  "slibtechniek": "technique",
+  "slide": "technique",
+  "slip technique": "technique",
+  "slver": {
+    "alias_of": "silver",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "smocking": "technique",
+  "smokepicture": "technique",
+  "snail marbled paper": "technique",
+  "snakeskin": "material",
+  "snipping": "technique",
+  "snowflake filling": "technique",
+  "soapstone": "material",
+  "soft ground etching": {
+    "alias_of": "soft-ground etching",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "soft paste porcelain": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "soft-ground etching": "technique",
+  "soft-paste porcelain": "material",
+  "softground etching": {
+    "alias_of": "soft-ground etching",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "softwood": "material",
+  "soldering": "technique",
+  "soumak": "technique",
+  "spanish marbled paper": "technique",
+  "spanish needle lace": "technique",
+  "spatter": "technique",
+  "spatters": {
+    "alias_of": "spatter",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "spider": "technique",
+  "spijlengrond": "technique",
+  "spindle ground": "technique",
+  "spinning": "technique",
+  "splatter marble": "material",
+  "sprang": "technique",
+  "spray-painted": "technique",
+  "sprenkelmarmer": "technique",
+  "sprinkled": "technique",
+  "sprinkled calf": "material",
+  "spruce": "material",
+  "square": {
+    "alias_of": "squared",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "squared": "technique",
+  "squared paper": "material",
+  "staalets": "technique",
+  "stain": "technique",
+  "stained glass": "material",
+  "staining": "technique",
+  "stainless steel": "material",
+  "stamping": "technique",
+  "standing": {
+    "alias_of": "sanding",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "stapling": "technique",
+  "starch dyeing": "technique",
+  "steatite": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "steeel": {
+    "alias_of": "steel",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "steel": "material",
+  "steel engraving": "technique",
+  "steel engravings": {
+    "alias_of": "steel engraving",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "steel etching": "technique",
+  "steelsteek": "technique",
+  "steen": "material",
+  "steken": "technique",
+  "stem stitch": "technique",
+  "stencil printing": "technique",
+  "stenciling": "technique",
+  "stijfselverving": "technique",
+  "stippelets": "technique",
+  "stippelwerk": "technique",
+  "stipple engraving": "technique",
+  "stippled engraving": {
+    "alias_of": "stipple engraving",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "stippled etching": "technique",
+  "stippling": "technique",
+  "stitched": "technique",
+  "stitching": "technique",
+  "stofsteek": "technique",
+  "stone": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "stone marbled paper": "technique",
+  "stonepaste": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "stoneware": "material",
+  "stonware": {
+    "alias_of": "stoneware",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "stopwerk": "technique",
+  "stopwork": "technique",
+  "straw": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "strawboard": "material",
+  "straws": {
+    "alias_of": "straw",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "striking": "technique",
+  "strohalm": "material",
+  "struisvogelveer": "material",
+  "stucco": "material",
+  "stumped": "technique",
+  "stylografie": "technique",
+  "stylography": "technique",
+  "suassa": "material",
+  "suede": "material",
+  "sugar-lift": "technique",
+  "sulphur print": "technique",
+  "sumak": {
+    "alias_of": "soumak",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "suminagashi": "technique",
+  "sumizuri": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "sumizuri-e": "technique",
+  "sun lace": "technique",
+  "sun spot marbled paper": "technique",
+  "surimono": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "swedish lace": "technique",
+  "synthetic fiber": "material",
+  "tabby": "technique",
+  "taffeta": "material",
+  "takamakie": "technique",
+  "tally": "technique",
+  "tamboereren": "technique",
+  "tambouring": "technique",
+  "tamponeren": "technique",
+  "tanned": "technique",
+  "tape": "material",
+  "tape lace": "technique",
+  "tapes": {
+    "alias_of": "tape",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "tapestery": {
+    "alias_of": "tapestry",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "tapestry": "technique",
+  "tapestry weave": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "tapestry weaves": {
+    "alias_of": "tapestry weave",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "tapesty": {
+    "alias_of": "tapestry",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "tapsetry": {
+    "alias_of": "tapestry",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "taquet\u00e9": "technique",
+  "tarlatan": "material",
+  "tarring": "technique",
+  "tatting": "technique",
+  "teak": "material",
+  "tempera": "material",
+  "tenerife lace": "technique",
+  "tensioning": "technique",
+  "teren": "technique",
+  "terracotta": "material",
+  "terry": "material",
+  "textie": {
+    "alias_of": "textile",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "textile": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "textile materials": "material",
+  "textiles": {
+    "alias_of": "textile",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "ticking": "material",
+  "tie-dyed": "technique",
+  "tiger's eye": "material",
+  "tin": "material",
+  "tin alloy": "material",
+  "tin glaze": "material",
+  "tin glazed": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "tin plate": "material",
+  "tin plated": {
+    "alias_of": "tin plate",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "tinning": "technique",
+  "tissue paper": "material",
+  "tobacco": "material",
+  "togidashi": "technique",
+  "tombac": "material",
+  "tone lithography": "technique",
+  "toonlithografie": "technique",
+  "tooth": "material",
+  "topaz": "material",
+  "torchon lace": "technique",
+  "torsen": "technique",
+  "torsion": "technique",
+  "tortiseshell": {
+    "alias_of": "tortoiseshell",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "tortoise shell": "material",
+  "tortoiseshell": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "touchstone": "material",
+  "tourmaline": "material",
+  "tourmalines": {
+    "alias_of": "tourmaline",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "trachyte": "material",
+  "tracing paper": "material",
+  "transfer decoration": "technique",
+  "transfer-printed": "technique",
+  "transferdecor": "technique",
+  "transparant paper": "material",
+  "transparent paper": {
+    "alias_of": "transparant paper",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "travertine egyptian alabaster": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "tree root marbled paper": "technique",
+  "tricot": "material",
+  "tropical hardwood": "material",
+  "tropical wood": "material",
+  "tropisch hardhout": "material",
+  "tropisch hout": "material",
+  "tuff": "material",
+  "tufting": "technique",
+  "tule": "material",
+  "tuleborduurwerk": "technique",
+  "tuledoorstopwerk": "technique",
+  "tulegrond": "technique",
+  "tulle darning": "technique",
+  "tulle embroidery": "technique",
+  "tulle ground": "technique",
+  "turning": "technique",
+  "turqoise": {
+    "alias_of": "turquoise",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "turquise": {
+    "alias_of": "turquoise",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "turquoise": "material",
+  "turquoises": {
+    "alias_of": "turquoise",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "tweed": "material",
+  "tweekleurenautotypie": "technique",
+  "twill": "technique",
+  "twill weave": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "twill weaves": {
+    "alias_of": "twill weave",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "twined": "technique",
+  "twinwed": {
+    "alias_of": "twined",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "two-color autotype": "technique",
+  "typewriting": "technique",
+  "umimatsu": "material",
+  "unfired photoceramics": "technique",
+  "unprinted": {
+    "alias_of": "printed",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "upholstered": "technique",
+  "uranium oxide": "material",
+  "uranotype": "technique",
+  "uranotypie": "technique",
+  "urushi": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "valenciennes lace": "technique",
+  "valenciennes of ghent": "technique",
+  "various techniques": "technique",
+  "varnish": "material",
+  "varnishing": "technique",
+  "vegetable-tanned sheepskin": "material",
+  "veined marbled paper": "technique",
+  "vellum": "material",
+  "velout\u00e9": "technique",
+  "velum": {
+    "alias_of": "vellum",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "velvet": "material",
+  "velvet ribbon": "material",
+  "velvets": {
+    "alias_of": "velvet",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "veneer": "material",
+  "veneering": "technique",
+  "veneers": {
+    "alias_of": "veneer",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "venetian gros point": "technique",
+  "venetian needlepoint": "technique",
+  "venetian raised work": "technique",
+  "venetian rose point": "technique",
+  "venetian tape lace": "technique",
+  "verchromen": "technique",
+  "vermilion": "material",
+  "vermillion": {
+    "alias_of": "vermilion",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "verre \u00e9glomis\u00e9": "technique",
+  "verschillende technieken": "technique",
+  "vetro a reticello": "technique",
+  "vetro a retorti": "technique",
+  "vierkleurenautotypie": "technique",
+  "vierkleurenrotogravure": "technique",
+  "vitrification": "technique",
+  "vlas": "material",
+  "vloszijde": "material",
+  "voeren": "technique",
+  "voile": "material",
+  "walnut": "material",
+  "walrus ivory": "material",
+  "war lace": "technique",
+  "ware": {
+    "source": "labeled_residual",
+    "type": "material"
+  },
+  "wash": "technique",
+  "washed": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "water": "material",
+  "water color paper": {
+    "alias_of": "watercolor paper",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "water gilded": "technique",
+  "waterclor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watercoclor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watercolo": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watercolor": "material",
+  "watercolor paper": "material",
+  "watercolored": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watercolors": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watercolour": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watercooor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "waterdolor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watermarked": "technique",
+  "waterolor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "watwercolor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "wave marble": "technique",
+  "waving": {
+    "alias_of": "weaving",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "wax": "material",
+  "weave tapestry": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "weaving": "technique",
+  "weft loop weave": "material",
+  "welding": "technique",
+  "werk met samengetrokken draden": "technique",
+  "werk met uitgetrokken draden": "technique",
+  "wet collodion negative": "technique",
+  "wet collodion process": "technique",
+  "white gold": "material",
+  "white metal": "material",
+  "whitework": "technique",
+  "wiillow": {
+    "alias_of": "willow",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "wijdenes lace": "technique",
+  "willow": "material",
+  "wine": "material",
+  "without": "material",
+  "wood": "material",
+  "wood block print": {
+    "alias_of": "woodblock print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "wood engraving": "technique",
+  "wood engravings": {
+    "alias_of": "wood engraving",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "woodblcok print": {
+    "alias_of": "woodblock print",
+    "source": "ngram_typo_review",
+    "type": "technique"
+  },
+  "woodblock print": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "woodblock printed": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "woodblock prints": {
+    "source": "ngram_manual_review",
+    "type": "technique"
+  },
+  "woodburygravure": "technique",
+  "woodburytype": "technique",
+  "woodburytypes": {
+    "alias_of": "woodburytype",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "woodcarving": "technique",
+  "woodcut": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "woodcuts": {
+    "alias_of": "woodcut",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "wool": "material",
+  "work with drawn threads": "technique",
+  "worsted": "material",
+  "wove paper": {
+    "source": "ngram_manual_review",
+    "type": "material"
+  },
+  "wove papers": {
+    "alias_of": "wove paper",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "woven": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "woven paper": {
+    "alias_of": "wove paper",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "wover paper": {
+    "alias_of": "wove paper",
+    "source": "ngram_typo_review",
+    "type": "material"
+  },
+  "wrapping": "technique",
+  "writing": "technique",
+  "wrought iron": "material",
+  "wtaercolor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "wtercolor": {
+    "alias_of": "watercolor",
+    "source": "single_word_typo_review",
+    "type": "material"
+  },
+  "yarn": "material",
+  "yew": "material",
+  "zeefdruk in kleur": "technique",
+  "zilverbrokaat": "material",
+  "zilverkleurbleekdruk": "technique",
+  "zinc": "material",
+  "zinc etching": "technique",
+  "zincograph": {
+    "source": "labeled_residual",
+    "type": "technique"
+  },
+  "zincographs": {
+    "alias_of": "zincograph",
+    "source": "single_word_typo_review",
+    "type": "technique"
+  },
+  "zincography": "technique",
+  "zinkets": "technique",
+  "zwart krijt": "technique",
+  "zwart-witdia": "technique",
+  "zwarten": "technique",
+  "\u00e0 la poup\u00e9e": "technique",
+  "\u00e9mail en ronde bosse": "technique"
+}

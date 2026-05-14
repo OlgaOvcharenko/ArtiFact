@@ -1,0 +1,654 @@
+{
+  "city_to_country": {
+    "amsterdam": "netherlands",
+    "the hague": "netherlands",
+    "haarlem": "netherlands",
+    "utrecht": "netherlands",
+    "leiden": "netherlands",
+    "rotterdam": "netherlands",
+    "delft": "netherlands",
+    "dordrecht": "netherlands",
+    "northern netherlands": "netherlands",
+    "low countries": "netherlands",
+    "paris": "france",
+    "lyon": "france",
+    "marseille": "france",
+    "northern france": "france",
+    "rome": "italy",
+    "venice": "italy",
+    "florence": "italy",
+    "bologna": "italy",
+    "naples": "italy",
+    "milan": "italy",
+    "berlin": "germany",
+    "neurenberg": "germany",
+    "augsburg": "germany",
+    "leipzig": "germany",
+    "cologne": "germany",
+    "münchen": "germany",
+    "frankfurt am main": "germany",
+    "dresden": "germany",
+    "london": "united kingdom",
+    "england": "united kingdom",
+    "scotland": "united kingdom",
+    "edinburgh": "united kingdom",
+    "united kingdom": "united kingdom",
+    "antwerp": "belgium",
+    "brussels": "belgium",
+    "brugge": "belgium",
+    "flanders": "belgium",
+    "ghent": "belgium",
+    "south netherlandish": "belgium",
+    "madrid": "spain",
+    "barcelona": "spain",
+    "seville": "spain",
+    "valencia": "spain",
+    "granada": "spain",
+    "cairo": "egypt",
+    "alexandria": "egypt",
+    "byzantine egypt": "egypt",
+    "egypt": "egypt",
+    "new york": "united states",
+    "boston": "united states",
+    "philadelphia": "united states",
+    "chicago": "united states",
+    "united states": "united states",
+    "beijing": "china",
+    "shanghai": "china",
+    "guangzhou": "china",
+    "china": "china",
+    "tokyo": "japan",
+    "kyoto": "japan",
+    "osaka": "japan",
+    "edo": "japan",
+    "japan": "japan",
+    "tehran": "iran",
+    "isfahan": "iran",
+    "shiraz": "iran",
+    "iran": "iran",
+    "lima": "peru",
+    "cusco": "peru",
+    "peru": "peru",
+    "nasca": "peru",
+    "moche": "peru",
+    "mexico city": "mexico",
+    "mexico": "mexico",
+    "puebla": "mexico",
+    "vienna": "austria",
+    "austria": "austria",
+    "prague": "czech republic",
+    "czech republic": "czech republic"
+  },
+  "country_to_cities": {
+    "netherlands": [
+      "amsterdam",
+      "the hague",
+      "haarlem",
+      "utrecht",
+      "leiden",
+      "rotterdam",
+      "delft",
+      "dordrecht"
+    ],
+    "france": [
+      "paris",
+      "lyon",
+      "marseille"
+    ],
+    "italy": [
+      "rome",
+      "venice",
+      "florence",
+      "bologna",
+      "naples",
+      "milan"
+    ],
+    "germany": [
+      "berlin",
+      "neurenberg",
+      "augsburg",
+      "leipzig",
+      "cologne",
+      "münchen",
+      "frankfurt am main",
+      "dresden"
+    ],
+    "united kingdom": [
+      "london",
+      "scotland",
+      "edinburgh"
+    ],
+    "belgium": [
+      "antwerp",
+      "brussels",
+      "brugge",
+      "flanders",
+      "ghent"
+    ],
+    "spain": [
+      "madrid",
+      "barcelona",
+      "seville",
+      "valencia",
+      "granada"
+    ],
+    "egypt": [
+      "cairo",
+      "alexandria"
+    ],
+    "united states": [
+      "new york",
+      "boston",
+      "philadelphia",
+      "chicago"
+    ],
+    "china": [
+      "beijing",
+      "shanghai",
+      "guangzhou"
+    ],
+    "japan": [
+      "tokyo",
+      "kyoto",
+      "osaka",
+      "edo"
+    ],
+    "iran": [
+      "tehran",
+      "isfahan",
+      "shiraz"
+    ],
+    "peru": [
+      "lima",
+      "cusco",
+      "nasca",
+      "moche"
+    ],
+    "mexico": [
+      "mexico city",
+      "puebla"
+    ],
+    "austria": [
+      "vienna"
+    ],
+    "czech republic": [
+      "prague"
+    ]
+  },
+  "country_neighbors": {
+    "netherlands": [
+      "belgium",
+      "germany",
+      "france",
+      "united kingdom"
+    ],
+    "belgium": [
+      "netherlands",
+      "france",
+      "germany",
+      "united kingdom"
+    ],
+    "france": [
+      "italy",
+      "spain",
+      "germany",
+      "belgium",
+      "united kingdom"
+    ],
+    "italy": [
+      "france",
+      "spain",
+      "germany",
+      "austria"
+    ],
+    "spain": [
+      "france",
+      "italy",
+      "portugal"
+    ],
+    "germany": [
+      "netherlands",
+      "belgium",
+      "france",
+      "austria",
+      "czech republic",
+      "italy"
+    ],
+    "united kingdom": [
+      "france",
+      "netherlands",
+      "belgium",
+      "ireland"
+    ],
+    "egypt": [
+      "iran",
+      "turkey",
+      "israel",
+      "jordan"
+    ],
+    "china": [
+      "japan",
+      "korea",
+      "vietnam",
+      "thailand"
+    ],
+    "japan": [
+      "china",
+      "korea"
+    ],
+    "peru": [
+      "mexico",
+      "bolivia",
+      "chile",
+      "ecuador"
+    ],
+    "mexico": [
+      "peru",
+      "united states",
+      "guatemala"
+    ],
+    "united states": [
+      "canada",
+      "mexico",
+      "united kingdom"
+    ]
+  },
+  "city_neighbors": {
+    "amsterdam": [
+      "the hague",
+      "haarlem",
+      "utrecht",
+      "leiden",
+      "rotterdam",
+      "delft",
+      "dordrecht"
+    ],
+    "the hague": [
+      "amsterdam",
+      "haarlem",
+      "utrecht",
+      "leiden",
+      "rotterdam",
+      "delft",
+      "dordrecht"
+    ],
+    "haarlem": [
+      "amsterdam",
+      "the hague",
+      "utrecht",
+      "leiden",
+      "rotterdam",
+      "delft",
+      "dordrecht"
+    ],
+    "utrecht": [
+      "amsterdam",
+      "the hague",
+      "haarlem",
+      "leiden",
+      "rotterdam",
+      "delft",
+      "dordrecht"
+    ],
+    "leiden": [
+      "amsterdam",
+      "the hague",
+      "haarlem",
+      "utrecht",
+      "rotterdam",
+      "delft",
+      "dordrecht"
+    ],
+    "rotterdam": [
+      "amsterdam",
+      "the hague",
+      "haarlem",
+      "utrecht",
+      "leiden",
+      "delft",
+      "dordrecht"
+    ],
+    "delft": [
+      "amsterdam",
+      "the hague",
+      "haarlem",
+      "utrecht",
+      "leiden",
+      "rotterdam",
+      "dordrecht"
+    ],
+    "dordrecht": [
+      "amsterdam",
+      "the hague",
+      "haarlem",
+      "utrecht",
+      "leiden",
+      "rotterdam",
+      "delft"
+    ],
+    "paris": [
+      "lyon",
+      "marseille"
+    ],
+    "lyon": [
+      "paris",
+      "marseille"
+    ],
+    "marseille": [
+      "paris",
+      "lyon"
+    ],
+    "rome": [
+      "venice",
+      "florence",
+      "bologna",
+      "naples",
+      "milan"
+    ],
+    "venice": [
+      "rome",
+      "florence",
+      "bologna",
+      "naples",
+      "milan"
+    ],
+    "florence": [
+      "rome",
+      "venice",
+      "bologna",
+      "naples",
+      "milan"
+    ],
+    "bologna": [
+      "rome",
+      "venice",
+      "florence",
+      "naples",
+      "milan"
+    ],
+    "naples": [
+      "rome",
+      "venice",
+      "florence",
+      "bologna",
+      "milan"
+    ],
+    "milan": [
+      "rome",
+      "venice",
+      "florence",
+      "bologna",
+      "naples"
+    ],
+    "berlin": [
+      "neurenberg",
+      "augsburg",
+      "leipzig",
+      "cologne",
+      "münchen",
+      "frankfurt am main",
+      "dresden"
+    ],
+    "neurenberg": [
+      "berlin",
+      "augsburg",
+      "leipzig",
+      "cologne",
+      "münchen",
+      "frankfurt am main",
+      "dresden"
+    ],
+    "augsburg": [
+      "berlin",
+      "neurenberg",
+      "leipzig",
+      "cologne",
+      "münchen",
+      "frankfurt am main",
+      "dresden"
+    ],
+    "leipzig": [
+      "berlin",
+      "neurenberg",
+      "augsburg",
+      "cologne",
+      "münchen",
+      "frankfurt am main",
+      "dresden"
+    ],
+    "cologne": [
+      "berlin",
+      "neurenberg",
+      "augsburg",
+      "leipzig",
+      "münchen",
+      "frankfurt am main",
+      "dresden"
+    ],
+    "münchen": [
+      "berlin",
+      "neurenberg",
+      "augsburg",
+      "leipzig",
+      "cologne",
+      "frankfurt am main",
+      "dresden"
+    ],
+    "frankfurt am main": [
+      "berlin",
+      "neurenberg",
+      "augsburg",
+      "leipzig",
+      "cologne",
+      "münchen",
+      "dresden"
+    ],
+    "dresden": [
+      "berlin",
+      "neurenberg",
+      "augsburg",
+      "leipzig",
+      "cologne",
+      "münchen",
+      "frankfurt am main"
+    ],
+    "london": [
+      "england",
+      "scotland",
+      "edinburgh",
+      "united kingdom"
+    ],
+    "england": [
+      "london",
+      "scotland",
+      "edinburgh",
+      "united kingdom"
+    ],
+    "scotland": [
+      "london",
+      "england",
+      "edinburgh",
+      "united kingdom"
+    ],
+    "edinburgh": [
+      "london",
+      "england",
+      "scotland",
+      "united kingdom"
+    ],
+    "united kingdom": [
+      "london",
+      "england",
+      "scotland",
+      "edinburgh"
+    ],
+    "antwerp": [
+      "brussels",
+      "brugge",
+      "flanders",
+      "ghent",
+      "south netherlandish"
+    ],
+    "brussels": [
+      "antwerp",
+      "brugge",
+      "flanders",
+      "ghent",
+      "south netherlandish"
+    ],
+    "brugge": [
+      "antwerp",
+      "brussels",
+      "flanders",
+      "ghent",
+      "south netherlandish"
+    ],
+    "flanders": [
+      "antwerp",
+      "brussels",
+      "brugge",
+      "ghent",
+      "south netherlandish"
+    ],
+    "ghent": [
+      "antwerp",
+      "brussels",
+      "brugge",
+      "flanders",
+      "south netherlandish"
+    ],
+    "south netherlandish": [
+      "antwerp",
+      "brussels",
+      "brugge",
+      "flanders",
+      "ghent"
+    ],
+    "madrid": [
+      "barcelona",
+      "seville",
+      "valencia",
+      "granada"
+    ],
+    "barcelona": [
+      "madrid",
+      "seville",
+      "valencia",
+      "granada"
+    ],
+    "seville": [
+      "madrid",
+      "barcelona",
+      "valencia",
+      "granada"
+    ],
+    "valencia": [
+      "madrid",
+      "barcelona",
+      "seville",
+      "granada"
+    ],
+    "granada": [
+      "madrid",
+      "barcelona",
+      "seville",
+      "valencia"
+    ],
+    "cairo": [
+      "alexandria"
+    ],
+    "alexandria": [
+      "cairo"
+    ],
+    "new york": [
+      "boston",
+      "philadelphia",
+      "chicago"
+    ],
+    "boston": [
+      "new york",
+      "philadelphia",
+      "chicago"
+    ],
+    "philadelphia": [
+      "new york",
+      "boston",
+      "chicago"
+    ],
+    "chicago": [
+      "new york",
+      "boston",
+      "philadelphia"
+    ],
+    "beijing": [
+      "shanghai",
+      "guangzhou"
+    ],
+    "shanghai": [
+      "beijing",
+      "guangzhou"
+    ],
+    "guangzhou": [
+      "beijing",
+      "shanghai"
+    ],
+    "tokyo": [
+      "kyoto",
+      "osaka",
+      "edo"
+    ],
+    "kyoto": [
+      "tokyo",
+      "osaka",
+      "edo"
+    ],
+    "osaka": [
+      "tokyo",
+      "kyoto",
+      "edo"
+    ],
+    "edo": [
+      "tokyo",
+      "kyoto",
+      "osaka"
+    ],
+    "tehran": [
+      "isfahan",
+      "shiraz"
+    ],
+    "isfahan": [
+      "tehran",
+      "shiraz"
+    ],
+    "shiraz": [
+      "tehran",
+      "isfahan"
+    ],
+    "lima": [
+      "cusco",
+      "nasca",
+      "moche"
+    ],
+    "cusco": [
+      "lima",
+      "nasca",
+      "moche"
+    ],
+    "nasca": [
+      "lima",
+      "cusco",
+      "moche"
+    ],
+    "moche": [
+      "lima",
+      "cusco",
+      "nasca"
+    ],
+    "mexico city": [
+      "puebla"
+    ],
+    "puebla": [
+      "mexico city"
+    ]
+  }
+}
