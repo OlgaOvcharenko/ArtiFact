@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtiFact — A Large-Scale Multi-Modal Cultural Heritage Dataset</title>
+  <meta name="description" content="ArtiFact is a large-scale multi-modal dataset of 651,045 museum records pairing artwork images with structured metadata from the MET, AIC, and Rijksmuseum." />
+  <meta property="og:title" content="ArtiFact — Multi-Modal Cultural Heritage Dataset" />
+  <meta property="og:description" content="651,045 museum records pairing images with structured metadata from the MET, AIC, and Rijksmuseum." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      /* Fig 1 palette */
+      --red:     #D82F35;   /* circle / label red from LaTeX fred */
+      --red-dark:#a82028;
+      --teal:    #2A7A7A;   /* data-grid teal */
+      --teal-lt: #3a9a9a;
+      --gold:    #F5C518;   /* LLM-diamond yellow */
+      --gold-dk: #c49a10;
+      /* Neutrals */
+      --dark:    #1C1C1C;   /* hero / nav bg */
+      --dark2:   #2C2C2C;
+      --white:   #ffffff;
+      --cream:   #FAFAFA;
+      --gray50:  #F5F5F5;
+      --gray100: #EBEBEB;
+      --gray300: #CCCCCC;
+      --gray500: #888888;
+      --gray700: #555555;
+      --gray900: #1A1A1A;
+      /* Legacy aliases kept so existing rules still compile */
+      --navy:    #1C1C1C;
+      --navy2:   #2C2C2C;
+      --gold2:   #F5C518;
+      --green:   #2A7A7A;
+      --blue:    #2A7A7A;
+      --orange:  #D82F35;
+      --purple:  #2A7A7A;
+      --radius: 8px;
+      --shadow: 0 2px 12px rgba(0,0,0,.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.12);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--gray900);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    a { color: var(--navy); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem;
+      height: 56px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.25);
+    }
+    .nav-brand {
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--red); letter-spacing: 0.02em;
+    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.80);
+      font-size: .875rem; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--red); text-decoration: none; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(160deg, #ffffff 0%, #fff9f9 55%, #f0fafa 100%);
+      color: var(--gray900);
+      padding: 5.5rem 2rem 4.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--gray100);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 40% at 10% 20%, rgba(216,47,53,.07) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 35% at 90% 80%, rgba(42,122,122,.07) 0%, transparent 65%);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(216,47,53,.08);
+      border: 1px solid rgba(216,47,53,.22);
+      color: var(--red);
+      font-size: .78rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .3rem 1rem; border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 3.75rem);
+      font-weight: 800; line-height: 1.1;
+      margin-bottom: .9rem;
+      color: var(--gray900);
+      letter-spacing: -.025em;
+    }
+    .hero h1 span { color: var(--red); }
+    .hero-sub {
+      font-size: clamp(.975rem, 2vw, 1.125rem);
+      color: var(--gray700);
+      max-width: 1320px; margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+    .hero-stats {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .hero-stat {
+      background: white;
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: .9rem 1.6rem;
+      text-align: center;
+      box-shadow: 0 1px 8px rgba(0,0,0,.06);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .hero-stat:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.10); }
+    .hero-stat strong {
+      display: block;
+      font-size: 1.8rem; font-weight: 800; color: var(--red);
+      line-height: 1.1; letter-spacing: -.02em;
+    }
+    .hero-stat span { font-size: .78rem; color: var(--gray500); margin-top: .2rem; display: block; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .65rem 1.5rem; border-radius: 8px;
+      font-size: .9rem; font-weight: 600;
+      transition: all .18s; cursor: pointer;
+    }
+    .btn-primary {
+      background: white; color: var(--gray700);
+      border: 2px solid var(--dark);
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .btn-primary:hover { background: var(--gray50); border-color: #000; text-decoration: none; transform: translateY(-1px); }
+    .btn-outline {
+      border: 1.5px solid var(--gray300); color: var(--gray700);
+      background: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .btn-outline:hover { border-color: var(--gray500); background: var(--gray50); text-decoration: none; transform: translateY(-1px); }
+    .btn-hf {
+      background: white; color: var(--gray700);
+      border: 2px solid #FFD21E;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .btn-hf:hover { background: var(--gray50); border-color: #c49a10; text-decoration: none; transform: translateY(-1px); }
+
+    /* ── Sections ── */
+    section { padding: 4.5rem 2rem; background: var(--white); }
+    section:nth-child(even) { background: var(--cream); }
+    .container { max-width: 1320px; margin: 0 auto; }
+    .section-label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: .4rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 800; color: var(--gray900);
+      margin-bottom: .75rem; line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+    .section-desc {
+      color: var(--gray700); margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    /* ── Access / Download ── */
+    .access-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem; margin-bottom: 2rem;
+    }
+    .access-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: .75rem;
+    }
+    .access-card-header { display: flex; align-items: center; gap: .75rem; }
+    .access-card-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem; flex-shrink: 0;
+    }
+    .access-card h3 { font-size: 1rem; font-weight: 700; color: var(--gray900); }
+    .access-card p  { font-size: .875rem; color: var(--gray700); flex: 1; }
+    .access-card a.access-btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .5rem 1.1rem; border-radius: 7px;
+      font-size: .85rem; font-weight: 600;
+      transition: all .2s; align-self: flex-start;
+    }
+    .hf-btn { background: #FFD21E; color: #1a1a1a; }
+    .hf-btn:hover { background: #ffe566; text-decoration: none; }
+    .gh-btn { background: var(--navy); color: white; }
+    .gh-btn:hover { background: var(--navy2); text-decoration: none; }
+    .code-snippet {
+      background: var(--navy);
+      color: #a8c0e8;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      font-size: .82rem; line-height: 1.75;
+      position: relative;
+    }
+    .code-snippet pre { white-space: pre-wrap; word-break: break-word; }
+    .code-snippet .copy-btn { top: .75rem; right: .75rem; }
+    .hf-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: #fff8e1; border: 1px solid #FFD21E;
+      color: #7a5c00; font-size: .78rem; font-weight: 600;
+      padding: .25rem .7rem; border-radius: 999px;
+    }
+
+    /* ── Abstract ── */
+    .abstract-box {
+      background: var(--gray50);
+      border-left: 4px solid var(--red);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem 2rem;
+      font-size: .975rem; color: var(--gray700);
+      line-height: 1.75;
+    }
+
+    /* ── Stats grid ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem; margin-bottom: 2.5rem;
+    }
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      border-top: 3px solid var(--red);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform .18s, box-shadow .18s;
+    }
+    .stat-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.10); }
+    .stat-card .num {
+      font-size: 2.1rem; font-weight: 800; color: var(--red);
+      line-height: 1.1; display: block; letter-spacing: -.02em;
+    }
+    .stat-card .lbl { font-size: .83rem; color: var(--gray500); margin-top: .3rem; }
+
+    /* ── Source cards ── */
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .source-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--red);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .source-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.10); }
+    .source-card h3 {
+      font-size: 1.05rem; font-weight: 700; color: var(--gray900);
+      margin-bottom: .25rem;
+    }
+    .source-card .source-abbr {
+      font-size: .75rem; font-weight: 700; color: var(--red);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: .75rem;
+    }
+    .source-card p { font-size: .9rem; color: var(--gray700); }
+    .source-card .count {
+      margin-top: 1rem; font-size: 1.4rem; font-weight: 700; color: var(--gray900);
+    }
+    .source-card .count span { font-size: .8rem; font-weight: 400; color: var(--gray500); }
+
+    /* ── Schema ── */
+    .schema-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .schema-group {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow);
+      border-top: 3px solid currentColor;
+      transition: transform .18s, box-shadow .18s;
+    }
+    .schema-group:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0,0,0,.09); }
+    .schema-group h4 {
+      font-size: .78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; margin-bottom: .75rem;
+    }
+    .schema-group ul { list-style: none; }
+    .schema-group li {
+      font-size: .82rem; color: var(--gray700);
+      padding: .22rem 0; display: flex; align-items: center; gap: .4rem;
+    }
+    .schema-group li::before {
+      content: ''; display: inline-block;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: currentColor; flex-shrink: 0;
+    }
+    .color-id     { color: #D82F35; }   /* red — identifiers */
+    .color-time   { color: #2A7A7A; }   /* teal — temporal */
+    .color-phys   { color: #2A7A7A; }   /* teal — physical */
+    .color-geo    { color: #D82F35; }   /* red — geo/cultural */
+    .color-artist { color: #555555; }   /* dark gray — artist */
+
+    /* ── Pipeline ── */
+    .pipeline {
+      display: flex; flex-wrap: wrap; gap: 0;
+      border: 1px solid var(--gray300); border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .pipe-step {
+      flex: 1; min-width: 160px;
+      padding: 1.5rem 1.25rem;
+      background: var(--white);
+      border-right: 1px solid var(--gray300);
+      position: relative;
+    }
+    .pipe-step:last-child { border-right: none; }
+    .pipe-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--red); color: white;
+      font-size: .75rem; font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .pipe-step h4 { font-size: .9rem; font-weight: 700; color: var(--gray900); margin-bottom: .4rem; }
+    .pipe-step p  { font-size: .82rem; color: var(--gray700); }
+
+    /* ── Error taxonomy ── */
+    .error-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.1rem;
+    }
+    .error-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: .6rem;
+      transition: transform .18s, box-shadow .18s;
+    }
+    .error-card:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0,0,0,.09); }
+    .error-header {
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .error-dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    }
+    .error-card h3 { font-size: .95rem; font-weight: 700; color: var(--gray900); }
+    .error-card p  { font-size: .85rem; color: var(--gray700); line-height: 1.55; }
+    .error-count {
+      font-size: .8rem; font-weight: 600; color: var(--gray500);
+      background: var(--gray50); border-radius: 6px;
+      padding: .2rem .6rem; align-self: flex-start;
+    }
+
+    /* ── Tasks ── */
+    .tasks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .task-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--teal);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .task-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.10); }
+    .task-icon {
+      font-size: 1.75rem; margin-bottom: .75rem;
+    }
+    .task-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--gray900); margin-bottom: .5rem; }
+    .task-card p  { font-size: .9rem; color: var(--gray700); margin-bottom: 1rem; }
+    .task-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .tag {
+      font-size: .75rem; font-weight: 600;
+      padding: .2rem .6rem; border-radius: 999px;
+      background: var(--gray100); color: var(--gray700);
+    }
+
+    /* ── Results table ── */
+    .results-wrapper { overflow-x: auto; }
+    table {
+      width: 100%; border-collapse: collapse;
+      font-size: .875rem;
+    }
+    thead { background: var(--dark); color: white; }
+    thead th {
+      padding: .65rem 1rem; text-align: left;
+      font-weight: 600; font-size: .8rem; letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    tbody tr { transition: background .12s; }
+    tbody td { padding: .55rem 1rem; color: var(--gray700); }
+    /* difficulty row tints — override nth-child striping */
+    tbody tr.diff-easy   { background: rgba(42,122,122,.06); border-left: 3px solid #2A7A7A; }
+    tbody tr.diff-medium { background: rgba(196,154,16,.06); border-left: 3px solid #c49a10; }
+    tbody tr.diff-hard   { background: rgba(216,47,53,.06);  border-left: 3px solid #D82F35; }
+    tbody tr.diff-easy:hover   { background: rgba(42,122,122,.13) !important; }
+    tbody tr.diff-medium:hover { background: rgba(196,154,16,.13) !important; }
+    tbody tr.diff-hard:hover   { background: rgba(216,47,53,.11) !important; }
+    .cat-badge {
+      display: inline-block; font-size: .72rem; font-weight: 700;
+      padding: .18rem 0; border-radius: 4px; color: white;
+      white-space: nowrap; text-align: center;
+      width: 76px;
+    }
+    td .f1-bar {
+      display: flex; align-items: center; gap: .5rem;
+    }
+    td .f1-fill {
+      height: 7px; border-radius: 3px;
+      min-width: 2px;
+    }
+    td .f1-val { font-weight: 700; color: var(--gray900); min-width: 2.5rem; }
+    /* difficulty chips */
+    .diff-chip {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .7rem; font-weight: 700; letter-spacing: .03em;
+      padding: .18rem .6rem; border-radius: 999px; white-space: nowrap;
+    }
+    .diff-chip::before {
+      content: ''; display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+    }
+    .chip-easy   { background: rgba(42,122,122,.12);  color: #1e6060; }
+    .chip-medium { background: rgba(196,154,16,.14);  color: #8a6a00; }
+    .chip-hard   { background: rgba(216,47,53,.12);   color: #a82028; }
+    /* legend */
+    .diff-legend {
+      display: flex; gap: 1.25rem; flex-wrap: wrap;
+      margin-bottom: 1rem; align-items: center;
+      font-size: .8rem; color: var(--gray700);
+    }
+    .diff-legend span { display: inline-flex; align-items: center; gap: .35rem; }
+
+    /* ── Museum name colors — from Figure 1 arrow colors ── */
+    .mus-met   { color: #D82F35; font-weight: 600; }  /* red  — THE MET arrow  */
+    .mus-aic   { color: #1a9fd4; font-weight: 600; }  /* sky blue — AIC arrow (#65c6ff, darkened for legibility) */
+    .mus-rijks { color: #000000; font-weight: 700; }  /* bold black — Rijksmuseum */
+
+    /* ── Citation ── */
+    .citation-box {
+      background: var(--navy);
+      color: #a8c0e8;
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      font-size: .82rem; line-height: 1.8;
+      position: relative; overflow: hidden;
+    }
+    .citation-box pre { white-space: pre-wrap; word-break: break-word; }
+    .copy-btn {
+      position: absolute; top: .9rem; right: .9rem;
+      background: rgba(255,255,255,.12); color: rgba(255,255,255,.8);
+      border: none; border-radius: 6px;
+      padding: .3rem .7rem; font-size: .75rem; font-weight: 600;
+      cursor: pointer; transition: background .2s;
+    }
+    .copy-btn:hover { background: rgba(255,255,255,.22); }
+    .copied { background: var(--green) !important; color: white !important; }
+
+    /* ── Authors ── */
+    .authors-grid {
+      display: flex; flex-wrap: wrap; gap: 1.25rem;
+    }
+    .author-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow);
+      flex: 1; min-width: 200px; max-width: 280px;
+    }
+    .author-card h4 { font-size: .95rem; font-weight: 700; color: var(--gray900); }
+    .author-card p  { font-size: .83rem; color: var(--gray500); margin-top: .2rem; }
+    .author-card a  { font-size: .83rem; color: var(--red); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.55);
+      text-align: center;
+      padding: 2rem;
+      font-size: .85rem;
+    }
+    footer a { color: rgba(255,255,255,.75); }
+    footer strong { color: rgba(255,255,255,.9); }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 1rem; }
+      section { padding: 2.5rem 1rem; }
+      .hero { padding: 3rem 1rem 2.5rem; }
+      .pipeline { flex-direction: column; }
+      .pipe-step { border-right: none; border-bottom: 1px solid var(--gray300); }
+      .pipe-step:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <span class="nav-brand">ArtiFact</span>
+  <ul class="nav-links">
+    <li><a href="#figures">Overview</a></li>
+    <li><a href="#dataset">Dataset</a></li>
+    <li><a href="#errors">Errors</a></li>
+    <li><a href="#tasks">Tasks</a></li>
+    <li><a href="#citation">Cite</a></li>
+    <li><a href="https://huggingface.co/datasets/deem-data/ArtiFact" style="color:#F5C518">&#x1F917; HuggingFace</a></li>
+    <li><a href="https://github.com/OlgaOvcharenko/ArtiFact" style="display:inline-flex;align-items:center;gap:.35rem"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.58 9.58 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>GitHub</a></li>
+  </ul>
+</nav>
+
+<!-- ── Hero ── -->
+<header class="hero">
+  <h1><span>ArtiFact</span>: A Large-Scale Multi-Modal Cultural Heritage Dataset</h1>
+  <p class="hero-sub">
+    651,045 museum records pairing artwork images with structured metadata,
+    collected from the <span class="mus-met">Metropolitan Museum of Art</span>, the <span class="mus-aic">Art Institute of Chicago</span>, and the <span class="mus-rijks">Rijksmuseum</span>.
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <strong>651K</strong>
+      <span>Artwork records</span>
+    </div>
+    <div class="hero-stat">
+      <strong>3</strong>
+      <span>Institutions</span>
+    </div>
+    <div class="hero-stat">
+      <strong>24</strong>
+      <span>Schema columns</span>
+    </div>
+    <div class="hero-stat">
+      <strong>130K</strong>
+      <span>Error-annotated records</span>
+    </div>
+    <div class="hero-stat">
+      <strong>7</strong>
+      <span>Error categories</span>
+    </div>
+  </div>
+  <div class="hero-buttons">
+    <a class="btn btn-hf" href="https://huggingface.co/datasets/deem-data/ArtiFact">
+      <svg width="17" height="17" viewBox="0 0 95 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.2 6C25.1 6 7.2 23.9 7.2 46s17.9 40 40 40 40-17.9 40-40S69.3 6 47.2 6z" fill="#FFD21E"/><path d="M28.5 52.5c0-3 2.4-5.5 5.5-5.5s5.5 2.4 5.5 5.5S37 58 34 58s-5.5-2.5-5.5-5.5zM55.5 52.5c0-3 2.4-5.5 5.5-5.5s5.5 2.4 5.5 5.5S64 58 61 58s-5.5-2.5-5.5-5.5z" fill="#3A3B45"/><path d="M35 65c3.3 3.3 8.7 5 12.2 5s8.9-1.7 12.2-5" stroke="#3A3B45" stroke-width="3.5" stroke-linecap="round"/><path d="M22 40c0-1.7 1.3-3 3-3s3 1.3 3 3v7c0 1.7-1.3 3-3 3s-3-1.3-3-3v-7zM67 40c0-1.7 1.3-3 3-3s3 1.3 3 3v7c0 1.7-1.3 3-3 3s-3-1.3-3-3v-7z" fill="#FF9D00"/><path d="M47 6V2M36 8l-2-4M58 8l2-4" stroke="#FF9D00" stroke-width="3.5" stroke-linecap="round"/></svg>
+      HuggingFace
+    </a>
+    <a class="btn btn-primary" href="https://github.com/OlgaOvcharenko/ArtiFact">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.58 9.58 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      GitHub
+    </a>
+    <a class="btn btn-outline" href="#citation">
+      Cite
+    </a>
+  </div>
+</header>
+
+<!-- ── About ── -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">Overview</p>
+    <h2 class="section-title">What is ArtiFact?</h2>
+    <div class="abstract-box">
+      Multi-modal data has become a central focus of contemporary database research, driving advances in
+      data integration, retrieval, semantic query processing, and data quality management. Despite this
+      growing interest, the community lacks large-scale real-world datasets with multi-modal records.
+      <!-- <br/><br/> -->
+      We present <strong>ArtiFact</strong>, a large-scale multi-modal cultural heritage dataset containing
+      651,045 museum records pairing images with textual descriptions and structured data collected from
+      three major institutions: the <span class="mus-met">Metropolitan Museum of Art (MET)</span>, the <span class="mus-aic">Art Institute of Chicago (AIC)</span>,
+      and the <span class="mus-rijks">Rijksmuseum</span> in Amsterdam. To construct the dataset, we develop a unified ETL pipeline that
+      combines rule-based normalization with LLM-assisted semantic parsing to standardize heterogeneous
+      museum records across institutions.
+      <!-- <br/><br/> -->
+      ArtiFact supports a broad range of downstream tasks, including semantic query processing,
+      multi-modal retrieval, and multi-modal error detection. For the latter, the dataset incorporates a
+      curated taxonomy of realistic errors, allowing evaluation of multi-modal data cleaning methods.
+    </div>
+  </div>
+</section>
+
+<!-- ── Figures ── -->
+<section id="figures">
+  <div class="container">
+    <p class="section-label">How Does It Work</p>
+    <h2 class="section-title">Dataset Construction &amp; Error Taxonomy</h2>
+    <p class="section-desc">
+      ArtiFact is built through a 5-step Extract-Transform-Load (ETL) pipeline that collects, structures, normalizes, and deduplicates
+      records from three institutions, then supports downstream tasks including error detection and semantic querying.
+    </p>
+
+    <div style="margin-bottom:3rem">
+      <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem">Data Collection &amp; Downstream Tasks</p>
+      <div style="background:white;border:1px solid var(--gray100);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);text-align:center">
+        <img src="fig1_overview.png" alt="Overview of the ArtiFact dataset generation process: collect, structure, normalize, deduplicate, and downstream tasks including cross-modal error detection and semantic query processing."
+             style="max-width:100%;height:auto;border-radius:4px" />
+        <p style="font-size:.82rem;color:var(--gray500);margin-top:.9rem;line-height:1.6">
+          
+          Overview of the dataset generation process: an ETL pipeline
+          <strong style="color:var(--red)">&#x2460;</strong> collects,
+          <strong style="color:var(--red)">&#x2461;</strong> structures &amp; prepares,
+          <strong style="color:var(--red)">&#x2462;</strong> maps to a shared schema, and
+          <strong style="color:var(--red)">&#x2463;</strong> performs semantic data unification across three
+          cultural heritage institutions; the preprocessed dataset supports
+          <strong style="color:var(--red)">&#x2464;</strong> downstream tasks including cross-modal error
+          detection and semantic query processing.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Get the Data ── -->
+<section id="access">
+  <div class="container">
+    <p class="section-label">Access</p>
+    <h2 class="section-title">Get the Data</h2>
+    <p class="section-desc">
+      ArtiFact is freely available on HuggingFace Datasets and GitHub. Use the <code>datasets</code>
+      library to load it programmatically in seconds.
+    </p>
+
+    <div class="access-grid">
+      <div class="access-card">
+        <div class="access-card-header">
+          <div class="access-card-icon" style="background:#fff8e1">
+            <svg width="24" height="22" viewBox="0 0 95 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.2 6C25.1 6 7.2 23.9 7.2 46s17.9 40 40 40 40-17.9 40-40S69.3 6 47.2 6z" fill="#FFD21E"/><path d="M28.5 52.5c0-3 2.4-5.5 5.5-5.5s5.5 2.4 5.5 5.5S37 58 34 58s-5.5-2.5-5.5-5.5zM55.5 52.5c0-3 2.4-5.5 5.5-5.5s5.5 2.4 5.5 5.5S64 58 61 58s-5.5-2.5-5.5-5.5z" fill="#3A3B45"/><path d="M35 65c3.3 3.3 8.7 5 12.2 5s8.9-1.7 12.2-5" stroke="#3A3B45" stroke-width="3.5" stroke-linecap="round"/><path d="M22 40c0-1.7 1.3-3 3-3s3 1.3 3 3v7c0 1.7-1.3 3-3 3s-3-1.3-3-3v-7zM67 40c0-1.7 1.3-3 3-3s3 1.3 3 3v7c0 1.7-1.3 3-3 3s-3-1.3-3-3v-7z" fill="#FF9D00"/><path d="M47 6V2M36 8l-2-4M58 8l2-4" stroke="#FF9D00" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>HuggingFace Dataset</h3>
+        </div>
+        <p>Download directly from the HuggingFace Hub.</p>
+        <a class="access-btn hf-btn" href="https://huggingface.co/datasets/deem-data/ArtiFact">
+          <svg width="15" height="14" viewBox="0 0 95 88" fill="none"><path d="M47.2 6C25.1 6 7.2 23.9 7.2 46s17.9 40 40 40 40-17.9 40-40S69.3 6 47.2 6z" fill="#FF9D00"/></svg>
+          deem-data/ArtiFact
+        </a>
+      </div>
+
+      <div class="access-card">
+        <div class="access-card-icon" style="display:none"></div>
+        <div class="access-card-header">
+          <div class="access-card-icon" style="background:#f0f4ff">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a2744"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.58 9.58 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </div>
+          <h3>GitHub Repository</h3>
+        </div>
+        <p>Source code for the ETL pipeline, error injection framework, and downstream tasks.</p>
+        <a class="access-btn gh-btn" href="https://github.com/OlgaOvcharenko/ArtiFact">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.58 9.58 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          OlgaOvcharenko/ArtiFact
+        </a>
+      </div>
+    </div>
+
+    <div class="code-snippet">
+      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <pre id="code-text"><span style="color:#6c9ef5">from</span> datasets <span style="color:#6c9ef5">import</span> load_dataset
+
+<span style="color:#888"># Load the full dataset</span>
+ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
+
+<span style="color:#888"># Inspect available splits and columns</span>
+<span style="color:#82aaff">print</span>(ds)
+
+<span style="color:#888"># Access the first record</span>
+<span style="color:#82aaff">print</span>(ds[<span style="color:#c3e88d">"train"</span>][<span style="color:#f78c6c">0</span>])</pre>
+    </div>
+
+    <p style="margin-top:1rem;font-size:.85rem;color:var(--gray500)">
+      For licensing inquiries, contact
+      <a href="mailto:ovcharenko@tu-berlin.de">ovcharenko@tu-berlin.de</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ── Dataset ── -->
+<section id="dataset">
+  <div class="container">
+    <p class="section-label">Dataset</p>
+    <h2 class="section-title">Scale &amp; Sources</h2>
+    <p class="section-desc">
+      ArtiFact aggregates open-access records from three of the world's premier cultural institutions,
+      retaining only records with public-domain image URLs.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="num">651,045</span>
+        <div class="lbl">Total artwork records</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">3</span>
+        <div class="lbl">Contributing museums</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">1,700+</span>
+        <div class="lbl">Canonical material &amp; technique terms</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">168K</span>
+        <div class="lbl">Records processed with LLM parsing</div>
+      </div>
+    </div>
+
+    <div class="sources-grid">
+      <div class="source-card" style="border-top-color:#D82F35">
+        
+        <h3><span class="mus-met">The Metropolitan Museum of Art</span></h3>
+        <p>
+          Collected via the <span class="mus-met">MET</span> REST API across all 19 curatorial departments.
+        </p>
+      </div>
+      <div class="source-card" style="border-top-color:#1a9fd4">
+        
+        <h3><span class="mus-aic">Art Institute of Chicago</span></h3>
+        <p>
+          Collected via open-access JSON-LD files using the International Image
+          Interoperability Framework (IIIF). 
+        </p>
+      </div>
+      <div class="source-card" style="border-top-color:#000000">
+        
+        <h3><span class="mus-rijks">Rijksmuseum Amsterdam</span></h3>
+        <p>
+          Collected via OAI-PMH and recursive JSON-LD linked data parsing.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Schema ── -->
+<section id="schema">
+  <div class="container">
+    <p class="section-label">Schema</p>
+    <h2 class="section-title">Unified 24-Column Schema</h2>
+    <p class="section-desc">
+      Records from all three institutions are integrated into a single standardized schema spanning
+      identifiers, temporal attributes, physical properties, cultural/geographic context, and artist metadata.
+    </p>
+    <div class="schema-groups">
+      <div class="schema-group">
+        <h4 class="color-id">Identifiers</h4>
+        <ul>
+          <li class="color-id"><code>object_ID</code></li>
+          <li class="color-id"><code>object_name</code></li>
+          <li class="color-id"><code>title</code></li>
+          <li class="color-id"><code>description</code></li>
+          <li class="color-id"><code>subjects</code></li>
+          <li class="color-id"><code>inscriptions</code></li>
+          <li class="color-id"><code>image_url</code></li>
+        </ul>
+      </div>
+      <div class="schema-group">
+        <h4 class="color-time">Temporal</h4>
+        <ul>
+          <li class="color-time"><code>date_begin</code></li>
+          <li class="color-time"><code>date_end</code></li>
+          <li class="color-time"><code>date_begin_bce</code></li>
+          <li class="color-time"><code>date_end_bce</code></li>
+          <li class="color-time"><code>period</code></li>
+          <li class="color-time"><code>dynasty</code></li>
+          <li class="color-time"><code>reign</code></li>
+        </ul>
+      </div>
+      <div class="schema-group">
+        <h4 class="color-phys">Physical</h4>
+        <ul>
+          <li class="color-phys"><code>materials</code></li>
+          <li class="color-phys"><code>techniques</code></li>
+          <li class="color-phys"><code>dimensions_json</code></li>
+        </ul>
+      </div>
+      <div class="schema-group">
+        <h4 class="color-geo">Cultural / Geographic</h4>
+        <ul>
+          <li class="color-geo"><code>culture</code></li>
+          <li class="color-geo"><code>location</code></li>
+        </ul>
+      </div>
+      <div class="schema-group">
+        <h4 class="color-artist">Artist</h4>
+        <ul>
+          <li class="color-artist"><code>artist_name</code></li>
+          <li class="color-artist"><code>artist_role</code></li>
+          <li class="color-artist"><code>artist_nationality</code></li>
+          <li class="color-artist"><code>artist_date_begin</code></li>
+          <li class="color-artist"><code>artist_date_end</code></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Error taxonomy ── -->
+<section id="errors">
+  <div class="container">
+    <p class="section-label">Error Taxonomy</p>
+    <h2 class="section-title">Realistic Injected Errors</h2>
+    <p class="section-desc">
+      To support multi-modal error detection benchmarking, ArtiFact includes a curated taxonomy of
+      <strong>130,209</strong> synthetically injected errors across 7 categories and 19 subcategories,
+      informed by domain experts at the <span class="mus-met">MET</span>, <span class="mus-aic">AIC</span>, and <span class="mus-rijks">Rijksmuseum</span>.
+    </p>
+    <div class="error-grid">
+      <div class="error-card">
+        <div class="error-header">
+          <div class="error-dot" style="background:#D82F35"></div>
+          <h3>Physical Errors</h3>
+        </div>
+        <p>Material or technique anachronisms using world knowledge; interchanges between visually similar materials that frequently co-occur with the object type.</p>
+        <span class="error-count">20,484 records</span>
+      </div>
+      <div class="error-card">
+        <div class="error-header">
+          <div class="error-dot" style="background:#2A7A7A"></div>
+          <h3>Culture Errors</h3>
+        </div>
+        <p>Labels swapped between adjacent cultures or within the same continent — plausible but factually incorrect.</p>
+        <span class="error-count">10,780 records</span>
+      </div>
+      <div class="error-card">
+        <div class="error-header">
+          <div class="error-dot" style="background:#F5C518"></div>
+          <h3>Temporal Errors</h3>
+        </div>
+        <p>Creation date range shifted by a random historical offset of ±100, ±200, or ±300 years.</p>
+        <span class="error-count">8,992 records</span>
+      </div>
+      <div class="error-card">
+        <div class="error-header">
+          <div class="error-dot" style="background:#D82F35"></div>
+          <h3>Identity Errors</h3>
+        </div>
+        <p>Artist attribution challenges — from random swaps to swaps between artists sharing nationality, historical era, and primary specialization.</p>
+        <span class="error-count">26,952 records</span>
+      </div>
+      <div class="error-card">
+        <div class="error-header">
+          <div class="error-dot" style="background:#2A7A7A"></div>
+          <h3>Geographic Errors</h3>
+        </div>
+        <p>Locations exchanged between neighboring countries while maintaining a lexical overlap constraint to prevent trivially detectable swaps.</p>
+        <span class="error-count">13,476 records</span>
+      </div>
+      <div class="error-card">
+        <div class="error-header">
+          <div class="error-dot" style="background:#555555"></div>
+          <h3>Spatial Errors</h3>
+        </div>
+        <p>Dimension units scaled by 10× and aspect ratios swapped between height and width.</p>
+        <span class="error-count">15,837 records</span>
+      </div>
+      <div class="error-card">
+        <div class="error-header">
+          <div class="error-dot" style="background:#F5C518"></div>
+          <h3>Visual Errors</h3>
+        </div>
+        <p>Images swapped using CLIP embeddings to identify visual twins — adversarial pairs from different contexts that are visually similar but contextually distinct.</p>
+        <span class="error-count">33,688 records</span>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:.6rem">Error Taxonomy Examples</p>
+      <div style="background:white;border:1px solid var(--gray100);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);text-align:center">
+        <img src="fig2_errors.png" alt="Examples of the seven injected error types in ArtiFact: physical, culture, temporal, identity, geographic, spatial, and visual errors."
+             style="max-width:100%;height:auto;border-radius:4px" />
+        <p style="font-size:.82rem;color:var(--gray500);margin-top:.9rem;line-height:1.6">
+          
+          Seven error categories are injected into 130,209 records to create
+          a realistic evaluation benchmark for cross-modal error detection.
+          Errors span physical (material/technique), cultural, temporal, identity (artist),
+          geographic, spatial (dimensions), and visual (image swap) dimensions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Downstream Tasks ── -->
+<section id="tasks">
+  <div class="container">
+    <p class="section-label">Applications</p>
+    <h2 class="section-title">Downstream Tasks</h2>
+    <p class="section-desc">
+      ArtiFact is designed to support a broad range of multi-modal data management research. We showcase two representative downstream tasks: cross-modal error detection and semantic query processing.
+    </p>
+    <div class="tasks-grid">
+      <div class="task-card">
+        <div class="task-icon">🔍</div>
+        <h3>Cross-Modal Error Detection</h3>
+        <p>
+          Detect inconsistencies between image and metadata using the 130K-record annotated benchmark.
+        </p>
+      </div>
+      <div class="task-card">
+        <div class="task-icon">💬</div>
+        <h3>Semantic Query Processing</h3>
+        <p>
+          A mini-benchmark of 5 semantic queries combining relational predicates over structured data with
+          semantic operators over text and images.
+        </p>
+      </div>
+      <div class="task-card">
+        <div class="task-icon">🖼️</div>
+        <h3>Multi-Modal Retrieval</h3>
+        <p>
+          The paired image–metadata structure supports cross-modal retrieval tasks: retrieve artworks by
+          image similarity, by structured attributes, or by combined semantic-visual queries.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Citation ── -->
+<section id="citation">
+  <div class="container">
+    <p class="section-label">Citation</p>
+    <h2 class="section-title">Cite ArtiFact</h2>
+    <p class="section-desc">
+      If you use ArtiFact in your research, please cite our paper:
+    </p>
+    <div class="citation-box">
+      <button class="copy-btn" onclick="copyBib(this)">Copy</button>
+      <pre id="bib-text">@article{duarte2026artifact,
+  title     = {{ArtiFact}: A Large-Scale Multi-Modal Cultural Heritage Dataset},
+  author    = {Duarte, Luciano and Ovcharenko, Olga and Schelter, Sebastian},
+  year      = {2026},
+  url       = {https://github.com/OlgaOvcharenko/ArtiFact}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ── Authors ── -->
+<section id="authors">
+  <div class="container">
+    <p class="section-label">Team</p>
+    <h2 class="section-title">Authors</h2>
+    <div class="authors-grid">
+      <div class="author-card">
+        <h4>Luciano Duarte</h4>
+        <p>BIFOLD &amp; TU Berlin</p>
+        <a href="mailto:duarte.castineira@tu-berlin.de">duarte.castineira@tu-berlin.de</a>
+      </div>
+      <div class="author-card">
+        <h4>Olga Ovcharenko</h4>
+        <p>BIFOLD &amp; TU Berlin</p>
+        <a href="mailto:ovcharenko@tu-berlin.de">ovcharenko@tu-berlin.de</a>
+      </div>
+      <div class="author-card">
+        <h4>Sebastian Schelter</h4>
+        <p>BIFOLD &amp; TU Berlin</p>
+        <a href="mailto:schelter@tu-berlin.de">schelter@tu-berlin.de</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>
+    <strong>ArtiFact</strong> &nbsp;&middot;&nbsp;
+    Licensed under
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/OlgaOvcharenko/ArtiFact">GitHub</a>
+  </p>
+  <p style="margin-top:.5rem">
+    &copy; 2026 Luciano Duarte, Olga Ovcharenko, Sebastian Schelter &mdash; BIFOLD &amp; TU Berlin
+  </p>
+</footer>
+
+<script>
+  function copyBib(btn) {
+    const text = document.getElementById('bib-text').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+  function copyCode(btn) {
+    const el = document.getElementById('code-text');
+    navigator.clipboard.writeText(el.innerText).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+</script>
+</body>
+</html>
