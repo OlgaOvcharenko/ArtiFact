@@ -45,7 +45,7 @@
       --shadow: 0 2px 12px rgba(0,0,0,.08);
       --shadow-lg: 0 8px 32px rgba(0,0,0,.12);
     }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 56px; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--cream);
@@ -535,23 +535,31 @@
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      nav { padding: 0 1rem; flex-wrap: wrap; }
-      .nav-toggle { display: flex; }
+      body.nav-open { overflow: hidden; }
+      nav { padding: 0 1rem; }
+      .nav-toggle { display: flex; flex-shrink: 0; }
+      .nav-brand { flex-shrink: 0; }
       .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         flex-direction: column;
-        width: 100%;
-        order: 3;
         gap: 0;
-        padding: .25rem 0 1rem;
+        padding: .5rem 1rem 1rem;
+        background: var(--navy);
         border-top: 1px solid rgba(255,255,255,.12);
-        margin-top: .25rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,.3);
+        max-height: calc(100dvh - 56px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
       .nav-links.open { display: flex; }
       .nav-links li { width: 100%; }
       .nav-links a {
         display: block;
-        padding: .7rem .25rem;
+        padding: .75rem .5rem;
         font-size: .95rem;
       }
     }
@@ -1047,18 +1055,37 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
 
 <script>
   (function () {
+    const nav = document.getElementById('main-nav');
     const toggle = document.getElementById('nav-toggle');
     const links = document.getElementById('nav-links');
-    if (!toggle || !links) return;
+    if (!nav || !toggle || !links) return;
 
     function setMenuOpen(open) {
       links.classList.toggle('open', open);
+      document.body.classList.toggle('nav-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     }
 
-    toggle.addEventListener('click', () => setMenuOpen(!links.classList.contains('open')));
-    links.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenuOpen(false)));
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setMenuOpen(!links.classList.contains('open'));
+    });
+
+    links.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        if (a.getAttribute('href')?.startsWith('#')) {
+          setTimeout(() => setMenuOpen(false), 150);
+        } else {
+          setMenuOpen(false);
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (links.classList.contains('open') && !nav.contains(e.target)) setMenuOpen(false);
+    });
+
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) setMenuOpen(false);
     });
