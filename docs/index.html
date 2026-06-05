@@ -77,6 +77,16 @@
       transition: color .2s;
     }
     .nav-links a:hover { color: var(--red); text-decoration: none; }
+    .nav-toggle {
+      display: none;
+      align-items: center; justify-content: center;
+      width: 40px; height: 40px;
+      background: none; border: none; border-radius: 6px;
+      color: white; cursor: pointer;
+      transition: background .2s;
+    }
+    .nav-toggle:hover { background: rgba(255,255,255,.1); }
+    .nav-toggle svg { pointer-events: none; }
 
     /* ── Hero ── */
     .hero {
@@ -524,9 +534,28 @@
     footer strong { color: rgba(255,255,255,.9); }
 
     /* ── Responsive ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; flex-wrap: wrap; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        gap: 0;
+        padding: .25rem 0 1rem;
+        border-top: 1px solid rgba(255,255,255,.12);
+        margin-top: .25rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a {
+        display: block;
+        padding: .7rem .25rem;
+        font-size: .95rem;
+      }
+    }
     @media (max-width: 640px) {
-      nav { padding: 0 1rem; }
-      .nav-links { gap: 1rem; }
       section { padding: 2.5rem 1rem; }
       .hero { padding: 3rem 1rem 2.5rem; }
       .pipeline { flex-direction: column; }
@@ -538,9 +567,14 @@
 <body>
 
 <!-- ── Navigation ── -->
-<nav>
+<nav id="main-nav">
   <span class="nav-brand">ArtiFact</span>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#figures">Overview</a></li>
     <li><a href="#dataset">Dataset</a></li>
     <li><a href="#errors">Errors</a></li>
@@ -605,9 +639,8 @@
       growing interest, the community lacks large-scale real-world datasets with multi-modal records.
       <!-- <br/><br/> -->
       We present <strong>ArtiFact</strong>, a large-scale multi-modal cultural heritage dataset containing
-      651,045 museum records pairing images with textual descriptions and structured data collected from
-      three major institutions: the <span class="mus-met">Metropolitan Museum of Art (MET)</span>, the <span class="mus-aic">Art Institute of Chicago (AIC)</span>,
-      and the <span class="mus-rijks">Rijksmuseum</span> in Amsterdam. To construct the dataset, we develop a unified ETL pipeline that
+      651,045 museum records collected from three major institutions: the <span class="mus-met">Metropolitan Museum of Art (MET)</span>, the <span class="mus-aic">Art Institute of Chicago (AIC)</span>,
+      and the <span class="mus-rijks">Rijksmuseum</span> in Amsterdam, each pairing images with textual descriptions and structured data. To construct the dataset, we developed a unified ETL pipeline that
       combines rule-based normalization with LLM-assisted semantic parsing to standardize heterogeneous
       museum records across institutions.
       <!-- <br/><br/> -->
@@ -621,7 +654,7 @@
 <!-- ── Figures ── -->
 <section id="figures">
   <div class="container">
-    <p class="section-label">How Does It Work</p>
+    <p class="section-label">How It Works</p>
     <h2 class="section-title">Dataset Construction &amp; Error Taxonomy</h2>
     <p class="section-desc">
       ArtiFact is built through a 5-step Extract-Transform-Load (ETL) pipeline that collects, structures, normalizes, and deduplicates
@@ -631,7 +664,7 @@
     <div style="margin-bottom:3rem">
       <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem">Data Collection &amp; Downstream Tasks</p>
       <div style="background:white;border:1px solid var(--gray100);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);text-align:center">
-        <img src="fig1_overview.png" alt="Overview of the ArtiFact dataset generation process: collect, structure, normalize, deduplicate, and downstream tasks including cross-modal error detection and semantic query processing."
+        <img src="fig1_overview.png" alt="Overview of the ArtiFact dataset generation process: collect, structure, normalize, and deduplicate records, and support downstream tasks including cross-modal error detection and semantic query processing."
              style="max-width:100%;height:auto;border-radius:4px" />
         <p style="font-size:.82rem;color:var(--gray500);margin-top:.9rem;line-height:1.6">
           
@@ -836,8 +869,8 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
     <p class="section-label">Error Taxonomy</p>
     <h2 class="section-title">Realistic Injected Errors</h2>
     <p class="section-desc">
-      To support multi-modal error detection benchmarking, ArtiFact includes a curated taxonomy of
-      <strong>130,209</strong> synthetically injected errors across 7 categories and 19 subcategories,
+      To support multi-modal error detection benchmarking, ArtiFact includes a curated error taxonomy applied to
+      <strong>130,209</strong> records with synthetically injected errors across 7 categories and 19 subcategories,
       informed by domain experts at the <span class="mus-met">MET</span>, <span class="mus-aic">AIC</span>, and <span class="mus-rijks">Rijksmuseum</span>.
     </p>
     <div class="error-grid">
@@ -846,7 +879,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
           <div class="error-dot" style="background:#D82F35"></div>
           <h3>Physical Errors</h3>
         </div>
-        <p>Material or technique anachronisms using world knowledge; interchanges between visually similar materials that frequently co-occur with the object type.</p>
+        <p>Injects material or technique anachronisms based on world knowledge, including interchanges between visually similar materials that frequently co-occur with the object type.</p>
         <span class="error-count">20,484 records</span>
       </div>
       <div class="error-card">
@@ -854,7 +887,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
           <div class="error-dot" style="background:#2A7A7A"></div>
           <h3>Culture Errors</h3>
         </div>
-        <p>Labels swapped between adjacent cultures or within the same continent — plausible but factually incorrect.</p>
+        <p>Swaps culture labels between adjacent cultures or within the same continent — plausible but factually incorrect.</p>
         <span class="error-count">10,780 records</span>
       </div>
       <div class="error-card">
@@ -862,7 +895,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
           <div class="error-dot" style="background:#F5C518"></div>
           <h3>Temporal Errors</h3>
         </div>
-        <p>Creation date range shifted by a random historical offset of ±100, ±200, or ±300 years.</p>
+        <p>Shifts the creation date range by a random historical offset of ±100, ±200, or ±300 years.</p>
         <span class="error-count">8,992 records</span>
       </div>
       <div class="error-card">
@@ -870,7 +903,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
           <div class="error-dot" style="background:#D82F35"></div>
           <h3>Identity Errors</h3>
         </div>
-        <p>Artist attribution challenges — from random swaps to swaps between artists sharing nationality, historical era, and primary specialization.</p>
+        <p>Introduces artist attribution errors ranging from random swaps to swaps between artists sharing nationality, historical era, and primary specialization.</p>
         <span class="error-count">26,952 records</span>
       </div>
       <div class="error-card">
@@ -878,7 +911,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
           <div class="error-dot" style="background:#2A7A7A"></div>
           <h3>Geographic Errors</h3>
         </div>
-        <p>Locations exchanged between neighboring countries while maintaining a lexical overlap constraint to prevent trivially detectable swaps.</p>
+        <p>Exchanges locations between neighboring countries, maintaining a lexical overlap constraint to prevent trivially detectable swaps.</p>
         <span class="error-count">13,476 records</span>
       </div>
       <div class="error-card">
@@ -886,7 +919,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
           <div class="error-dot" style="background:#555555"></div>
           <h3>Spatial Errors</h3>
         </div>
-        <p>Dimension units scaled by 10× and aspect ratios swapped between height and width.</p>
+        <p>Scales dimension units by 10× and swaps aspect ratios between height and width.</p>
         <span class="error-count">15,837 records</span>
       </div>
       <div class="error-card">
@@ -894,7 +927,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
           <div class="error-dot" style="background:#F5C518"></div>
           <h3>Visual Errors</h3>
         </div>
-        <p>Images swapped using CLIP embeddings to identify visual twins — adversarial pairs from different contexts that are visually similar but contextually distinct.</p>
+        <p>Swaps images identified via CLIP embeddings as visual twins — adversarial pairs from different contexts that are visually similar but contextually distinct.</p>
         <span class="error-count">33,688 records</span>
       </div>
     </div>
@@ -929,7 +962,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
         <div class="task-icon">🔍</div>
         <h3>Cross-Modal Error Detection</h3>
         <p>
-          Detect inconsistencies between image and metadata using the 130K-record annotated benchmark.
+          Detect inconsistencies between images and metadata using the 130K-record annotated benchmark.
         </p>
       </div>
       <div class="task-card">
@@ -1013,6 +1046,24 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
 </footer>
 
 <script>
+  (function () {
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    if (!toggle || !links) return;
+
+    function setMenuOpen(open) {
+      links.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+
+    toggle.addEventListener('click', () => setMenuOpen(!links.classList.contains('open')));
+    links.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenuOpen(false)));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) setMenuOpen(false);
+    });
+  })();
+
   function copyBib(btn) {
     const text = document.getElementById('bib-text').innerText;
     navigator.clipboard.writeText(text).then(() => {
