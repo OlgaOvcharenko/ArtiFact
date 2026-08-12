@@ -173,6 +173,18 @@
       box-shadow: 0 1px 4px rgba(0,0,0,.06);
     }
     .btn-hf:hover { background: var(--gray50); border-color: #c49a10; text-decoration: none; transform: translateY(-1px); }
+    .btn-paper {
+      background: white; color: var(--gray700);
+      border: 2px solid var(--teal);
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .btn-paper:hover { background: rgba(42,122,122,.08); border-color: var(--teal); text-decoration: none; transform: translateY(-1px); }
+    .btn-poster {
+      background: white; color: var(--gray700);
+      border: 2px solid var(--red);
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .btn-poster:hover { background: rgba(216,47,53,.06); border-color: var(--red-dark); text-decoration: none; transform: translateY(-1px); }
 
     /* ── Sections ── */
     section { padding: 4.5rem 2rem; background: var(--white); }
@@ -226,6 +238,10 @@
     .hf-btn:hover { background: #ffe566; text-decoration: none; }
     .gh-btn { background: var(--navy); color: white; }
     .gh-btn:hover { background: var(--navy2); text-decoration: none; }
+    .paper-btn { background: var(--teal); color: white; }
+    .paper-btn:hover { background: var(--teal-lt); text-decoration: none; }
+    .poster-btn { background: var(--red); color: white; }
+    .poster-btn:hover { background: var(--red-dark); text-decoration: none; }
     .code-snippet {
       background: var(--navy);
       color: #a8c0e8;
@@ -583,11 +599,14 @@
     </svg>
   </button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#figures">Overview</a></li>
+    <li><a href="#about">Overview</a></li>
+    <li><a href="#figures">Pipeline</a></li>
     <li><a href="#dataset">Dataset</a></li>
     <li><a href="#errors">Errors</a></li>
     <li><a href="#tasks">Tasks</a></li>
     <li><a href="#citation">Cite</a></li>
+    <li><a href="https://arxiv.org/abs/2606.09648">Paper</a></li>
+    <li><a href="artifact_poster.pdf">Poster</a></li>
     <li><a href="https://huggingface.co/datasets/deem-data/ArtiFact" style="color:#F5C518">&#x1F917; HuggingFace</a></li>
     <li><a href="https://github.com/OlgaOvcharenko/ArtiFact" style="display:inline-flex;align-items:center;gap:.35rem"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.58 9.58 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>GitHub</a></li>
   </ul>
@@ -599,6 +618,7 @@
   <p class="hero-sub">
     651,045 museum records pairing artwork images with structured metadata,
     collected from the <span class="mus-met">Metropolitan Museum of Art</span>, the <span class="mus-aic">Art Institute of Chicago</span>, and the <span class="mus-rijks">Rijksmuseum</span>.
+    Published at the <a href="https://www.novasworkshop.org/">NOVAS Workshop</a> at <a href="https://www.vldb.org/2026/">VLDB 2026</a>.
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
@@ -625,6 +645,12 @@
   <div class="hero-buttons">
     <a class="btn btn-hf" href="https://huggingface.co/datasets/deem-data/ArtiFact">
       🤗 HuggingFace
+    </a>
+    <a class="btn btn-paper" href="https://arxiv.org/abs/2606.09648">
+      📄 Paper
+    </a>
+    <a class="btn btn-poster" href="artifact_poster.pdf">
+      🖼 Poster
     </a>
     <a class="btn btn-primary" href="https://github.com/OlgaOvcharenko/ArtiFact">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.58 9.58 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.577.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
@@ -695,7 +721,7 @@
 <section id="access">
   <div class="container">
     <p class="section-label">Access</p>
-    <h2 class="section-title">Get the Data</h2>
+    <h2 class="section-title">Download ArtiFact</h2>
     <p class="section-desc">
       ArtiFact is freely available on HuggingFace Datasets and GitHub. Use the <code>datasets</code>
       library to load it programmatically in seconds.
@@ -746,7 +772,7 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
     </div>
 
     <p style="margin-top:1rem;font-size:.85rem;color:var(--gray500)">
-      For licensing inquiries, contact
+      For any questions, contact
       <a href="mailto:ovcharenko@tu-berlin.de">ovcharenko@tu-berlin.de</a>.
     </p>
   </div>
@@ -802,6 +828,18 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
         <h3><span class="mus-rijks">Rijksmuseum Amsterdam</span></h3>
         <p>
           Collected via OAI-PMH and recursive JSON-LD linked data parsing.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem">Dataset Diversity</p>
+      <div style="background:white;border:1px solid var(--gray100);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);text-align:center">
+        <img src="artifact_diversity.png" alt="ArtiFact dataset diversity: museum source, continent, object type, material, and technique distributions (top 5 categories per panel)."
+             style="max-width:100%;height:auto;border-radius:4px" />
+        <p style="font-size:.82rem;color:var(--gray500);margin-top:.9rem;line-height:1.6">
+          Distribution of 651,045 joint records across museum source, continent, object type,
+          material, and technique.
         </p>
       </div>
     </div>
@@ -1004,11 +1042,12 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
     </p>
     <div class="citation-box">
       <button class="copy-btn" onclick="copyBib(this)">Copy</button>
-      <pre id="bib-text">@article{duarte2026artifact,
-  title     = {{ArtiFact}: A Large-Scale Multi-Modal Cultural Heritage Dataset},
-  author    = {Duarte, Luciano and Ovcharenko, Olga and Schelter, Sebastian},
-  year      = {2026},
-  url       = {https://github.com/OlgaOvcharenko/ArtiFact}
+      <pre id="bib-text">@inproceedings{duarte2026artifact,
+  title         = {{ArtiFact}: A Large-Scale Multi-Modal Cultural Heritage Dataset},
+  author        = {Duarte, Luciano and Ovcharenko, Olga and Schelter, Sebastian},
+  booktitle     = {NOVAS Workshop (Novel Optimizations for Visionary AI Systems) at VLDB 2026},
+  year          = {2026},
+  url           = {https://arxiv.org/abs/2606.09648}
 }</pre>
     </div>
   </div>
@@ -1045,6 +1084,10 @@ ds = load_dataset(<span style="color:#c3e88d">"deem-data/ArtiFact"</span>)
     <strong>ArtiFact</strong> &nbsp;&middot;&nbsp;
     Licensed under
     <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://arxiv.org/abs/2606.09648">Paper</a>
+    &nbsp;&middot;&nbsp;
+    <a href="artifact_poster.pdf">Poster</a>
     &nbsp;&middot;&nbsp;
     <a href="https://github.com/OlgaOvcharenko/ArtiFact">GitHub</a>
   </p>
